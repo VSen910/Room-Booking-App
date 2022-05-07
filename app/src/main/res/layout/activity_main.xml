@@ -34,50 +34,24 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="50dp"/>
 
-    <RelativeLayout
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ug"
+        android:text="UG Floor"
+        android:textSize="20sp"
+        android:layout_below="@id/eblock"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/selectLine"
-        android:layout_marginTop="40dp">
+        android:id="@+id/recyclerview"
+        android:scrollbars="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ug"
-            android:text="UG Floor"
-            android:textSize="20sp"
-            android:layout_marginLeft="50dp"
-            />
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="116dp"
-            android:layout_height="68dp"
-            android:id="@+id/cardone"
-            app:cardCornerRadius="12dp"
-            app:cardBackgroundColor="#e3e2de"
-            android:layout_below="@+id/ug"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="30dp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="C101"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-    </RelativeLayout>
-
-
-
-
-
+    </androidx.recyclerview.widget.RecyclerView>
 </RelativeLayout>
