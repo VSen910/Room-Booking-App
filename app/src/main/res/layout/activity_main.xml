@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/eblock"
+        android:text="e Block"
+        android:textSize="24sp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="70dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/piblock"
+        android:text="π Block"
+        android:textSize="24sp"
+        android:layout_toEndOf="@+id/eblock"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="70dp"/>
+
+    <View
+        android:layout_width="80dp"
+        android:layout_height="2dp"
+        android:id="@+id/selectLine"
+        android:background="@color/black"
+        android:layout_below="@+id/eblock"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectLine"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ug"
+            android:text="UG Floor"
+            android:textSize="20sp"
+            android:layout_marginLeft="50dp"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="116dp"
+            android:layout_height="68dp"
+            android:id="@+id/cardone"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#e3e2de"
+            android:layout_below="@+id/ug"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="30dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C101"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>
