@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity"
+    android:background="#0a3e91">
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/detailsText"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:text="Enter your Details"
+        android:textSize="36sp"
+        android:textColor="@color/white"/>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/MyCardView"
+        android:backgroundTint="#EAE9E9"
+        android:layout_marginTop="160dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="40dp"
+                android:id="@+id/roomselect"
+                android:text="Room Selected: "
+                android:textSize="24sp"/>
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="52dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/roomselect"
+                android:id="@+id/namebox"
+                android:hint="Enter Name"
+                android:background="@drawable/edittext_design"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:elevation="12dp"/>
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="52dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/namebox"
+                android:layout_marginTop="30dp"
+                android:id="@+id/emailbox"
+                android:hint="Enter Email"
+                android:background="@drawable/edittext_design"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:elevation="12dp"/>
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="52dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/emailbox"
+                android:layout_marginTop="30dp"
+                android:id="@+id/contactbox"
+                android:hint="Enter Contact number"
+                android:background="@drawable/edittext_design"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:elevation="12dp"/>
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="52dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/contactbox"
+                android:layout_marginTop="30dp"
+                android:id="@+id/causebox"
+                android:hint="For what Reason"
+                android:background="@drawable/edittext_design"
+                android:drawableStart="@drawable/ic_info"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:elevation="12dp"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/causebox"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="40dp"
+                android:id="@+id/requestbox"
+                android:text="Request for a 2 hour slot"
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/requestbox"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="40dp"
+                    android:id="@+id/cnclbutton"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:text="Cancel"
+                    android:textColor="@color/primary"/>
+
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="52dp"
+                    android:id="@+id/sbmtbutton"
+                    android:text="Submit"
+                    android:backgroundTint="@color/primary"
+                    app:cornerRadius="12dp"/>
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>
