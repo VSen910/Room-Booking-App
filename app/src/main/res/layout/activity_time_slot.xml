@@ -35,7 +35,7 @@
         android:backgroundTint="#EAE9E9"
         style="@style/MyCardView"
         android:layout_below="@+id/roomnumber"
-        android:layout_marginTop="60dp">
+        android:layout_marginTop="40dp">
 
         <ScrollView
             android:layout_width="match_parent"
