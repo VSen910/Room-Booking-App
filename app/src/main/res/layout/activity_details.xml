@@ -39,19 +39,19 @@
                 android:textSize="24sp"/>
 
             <EditText
+                android:id="@+id/namebox"
                 android:layout_width="300dp"
                 android:layout_height="52dp"
+                android:layout_below="@+id/roomselect"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
-                android:layout_below="@+id/roomselect"
-                android:id="@+id/namebox"
-                android:hint="Enter Name"
                 android:background="@drawable/edittext_design"
                 android:drawableStart="@drawable/ic_person"
                 android:drawablePadding="10dp"
+                android:elevation="12dp"
+                android:hint="Enter Name"
                 android:paddingStart="20dp"
-                android:paddingEnd="20dp"
-                android:elevation="12dp"/>
+                android:paddingEnd="20dp" />
 
             <EditText
                 android:layout_width="300dp"
