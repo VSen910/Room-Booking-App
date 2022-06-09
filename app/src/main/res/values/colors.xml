@@ -10,4 +10,5 @@
     <color name="primary">#0a3e91</color>
     <color name="gradient">#3c0fd1</color>
     <color name="border">#160060</color>
+    <color name="start">#10023F</color>
 </resources>
