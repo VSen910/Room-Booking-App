@@ -17,7 +17,21 @@
         android:layout_marginTop="250dp"
         android:text="Email"
         android:textColor="@color/white"
-        android:textSize="25sp" />
+        android:textSize="22sp"
+        android:fontFamily="@font/montserrat_regular"/>
+
+    <EditText
+        android:id="@+id/emailbox"
+        android:layout_width="275dp"
+        android:layout_height="54dp"
+        android:layout_below="@+id/email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:singleLine="true"
+        android:background="@drawable/edittext_design"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/password"
@@ -29,17 +43,8 @@
         android:layout_marginTop="35dp"
         android:text="Password"
         android:textColor="@color/white"
-        android:textSize="25dp" />
-
-    <EditText
-        android:id="@+id/emailbox"
-        android:layout_width="275dp"
-        android:layout_height="54dp"
-        android:layout_below="@+id/email"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
-        android:background="@drawable/edittext_design"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+        android:textSize="22sp"
+        android:fontFamily="@font/montserrat_regular"/>
 
     <EditText
         android:id="@+id/passwordbox"
@@ -48,35 +53,40 @@
         android:layout_below="@+id/password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:singleLine="true"
         android:background="@drawable/edittext_design"
         android:inputType="textPassword"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/login_2"
         android:layout_width="180dp"
         android:layout_height="60dp"
         android:layout_below="@+id/passwordbox"
         android:layout_centerInParent="true"
         android:layout_marginTop="40dp"
+        style="@style/Widget.Material3.Button"
         android:backgroundTint="@color/white"
-        android:fontFamily="sans-serif-light"
-        android:text="Login"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="LOGIN"
         android:textColor="@color/primary"
-        android:textSize="22sp"
-        app:cornerRadius="30dp" />
+        android:textSize="22sp" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/cancel_1"
         android:layout_width="180dp"
         android:layout_height="60dp"
         android:layout_below="@+id/login_2"
         android:layout_centerInParent="true"
         android:layout_marginTop="22dp"
-        android:background="@drawable/tbutton"
-        android:fontFamily="sans-serif-light"
-        android:text="cancel"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        app:strokeColor="@color/black"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="CANCEL"
+        android:textColor="@color/white"
         android:textSize="22sp" />
 
 </RelativeLayout>

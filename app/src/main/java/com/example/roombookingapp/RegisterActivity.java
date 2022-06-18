@@ -9,18 +9,29 @@ import android.view.View;
 import android.widget.Button;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
-    Button cancel;
+    Button cancelbtn;
+    Button registerbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        cancel = findViewById(R.id.cancel_2);
-        cancel.setOnClickListener(this);
+
+        cancelbtn = findViewById(R.id.cancel_2);
+        cancelbtn.setOnClickListener(this);
+        registerbtn = findViewById(R.id.register_2);
+        registerbtn.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        Intent intent = new Intent(this, LoginRegisterActivity.class);
-        startActivity(intent);
+        switch (view.getId()){
+            case R.id.register_2:
+                Intent intent1 = new Intent(this, BookingActivity.class);
+                startActivity(intent1);
+                break;
+            case R.id.cancel_2:
+                finish();
+                break;
+        }
     }
 }

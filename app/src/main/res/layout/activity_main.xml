@@ -4,14 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/eblock"
         android:text="e Block"
+        android:textColor="@color/white"
         android:textSize="24sp"
+        android:fontFamily="@font/montserrat_regular"
         android:layout_marginStart="50dp"
         android:layout_marginTop="70dp"/>
 
@@ -20,7 +23,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/piblock"
         android:text="π Block"
+        android:textColor="@color/white"
         android:textSize="24sp"
+        android:fontFamily="@font/montserrat_regular"
         android:layout_toEndOf="@+id/eblock"
         android:layout_marginStart="40dp"
         android:layout_marginTop="70dp"/>
@@ -29,7 +34,7 @@
         android:layout_width="80dp"
         android:layout_height="2dp"
         android:id="@+id/selectLine"
-        android:background="@color/black"
+        android:background="@color/white"
         android:layout_below="@+id/eblock"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="50dp"/>
@@ -46,17 +51,148 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/uglayout"
+                android:id="@+id/lglayout"
                 android:layout_marginTop="40dp">
 
                 <TextView
+                    android:id="@+id/lg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ug"
-                    android:text="UG Floor"
-                    android:textSize="20sp"
                     android:layout_marginLeft="50dp"
-                    />
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="LG Floor"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/lg">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="116dp"
+                            android:layout_height="68dp"
+                            android:id="@+id/C001"
+                            app:cardCornerRadius="12dp"
+                            app:cardBackgroundColor="#e3e2de"
+                            android:layout_marginRight="20dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="C001"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="116dp"
+                            android:layout_height="68dp"
+                            android:id="@+id/C002"
+                            app:cardCornerRadius="12dp"
+                            app:cardBackgroundColor="#e3e2de"
+                            android:layout_marginRight="20dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="C002"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="116dp"
+                            android:layout_height="68dp"
+                            android:id="@+id/C003"
+                            app:cardCornerRadius="12dp"
+                            app:cardBackgroundColor="#e3e2de"
+                            android:layout_marginRight="20dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="C003"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="116dp"
+                            android:layout_height="68dp"
+                            android:id="@+id/C004"
+                            app:cardCornerRadius="12dp"
+                            app:cardBackgroundColor="#e3e2de"
+                            android:layout_marginRight="20dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="C004"
+                                    android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/uglayout"
+                android:layout_marginTop="40dp"
+                android:layout_below="@id/lglayout">
+
+                <TextView
+                    android:id="@+id/ug"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:text="UG Floor"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/montserrat_regular"/>
 
                 <HorizontalScrollView
                     android:layout_width="match_parent"
@@ -87,6 +223,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="C101"
                                     android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -110,6 +247,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="C102"
                                     android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -133,6 +271,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="C103"
                                     android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -156,6 +295,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="C104"
                                     android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -179,6 +319,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="C105"
                                     android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -189,6 +330,7 @@
                 </HorizontalScrollView>
 
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -197,13 +339,14 @@
                 android:layout_marginTop="40dp">
 
                 <TextView
+                    android:id="@+id/onefloor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/onefloor"
+                    android:layout_marginStart="50dp"
                     android:text="1st Floor"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
-                    android:layout_marginLeft="50dp"
-                    />
+                    android:fontFamily="@font/montserrat_regular"/>
 
                 <HorizontalScrollView
                     android:layout_width="match_parent"
@@ -234,6 +377,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="C201"
                                     android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -257,6 +401,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="C202"
                                     android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -280,6 +425,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="C203"
                                     android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -303,6 +449,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="C204"
                                     android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -326,6 +473,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="C205"
                                     android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -336,6 +484,7 @@
                 </HorizontalScrollView>
 
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -344,13 +493,14 @@
                 android:layout_marginTop="40dp">
 
                 <TextView
+                    android:id="@+id/twofloor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/twofloor"
+                    android:layout_marginStart="50dp"
                     android:text="2nd Floor"
-                    android:textSize="20sp"
-                    android:layout_marginLeft="50dp"
-                    />
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textSize="20sp" />
 
                 <HorizontalScrollView
                     android:layout_width="match_parent"
@@ -381,6 +531,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="C301"
                                     android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -404,6 +555,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="C302"
                                     android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -427,6 +579,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="C303"
                                     android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -450,6 +603,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="C304"
                                     android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -473,6 +627,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="C305"
                                     android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -483,6 +638,7 @@
                 </HorizontalScrollView>
 
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -496,7 +652,9 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/threefloor"
                     android:text="3rd Floor"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
+                    android:fontFamily="@font/montserrat_regular"
                     android:layout_marginLeft="50dp"
                     />
 
@@ -529,6 +687,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="C401"
                                     android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -552,6 +711,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="C402"
                                     android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -575,6 +735,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="C403"
                                     android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -598,6 +759,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="C404"
                                     android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -621,6 +783,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="C405"
                                     android:textSize="20sp"
+                                    android:fontFamily="@font/montserrat_regular"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
