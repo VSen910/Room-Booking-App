@@ -70,10 +70,10 @@
         android:layout_marginTop="40dp"
         style="@style/Widget.Material3.Button"
         android:backgroundTint="@color/white"
-        android:fontFamily="@font/montserrat_regular"
+        android:fontFamily="@font/opensans_regular"
         android:text="LOGIN"
         android:textColor="@color/primary"
-        android:textSize="22sp" />
+        android:textSize="20sp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/cancel_1"
@@ -84,9 +84,9 @@
         android:layout_marginTop="22dp"
         style="@style/Widget.Material3.Button.OutlinedButton"
         app:strokeColor="@color/black"
-        android:fontFamily="@font/montserrat_regular"
+        android:fontFamily="@font/opensans_regular"
         android:text="CANCEL"
         android:textColor="@color/white"
-        android:textSize="22sp" />
+        android:textSize="20sp" />
 
 </RelativeLayout>
