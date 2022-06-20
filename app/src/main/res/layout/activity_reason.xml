@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReasonActivity"
+    android:background="@drawable/gradient">
+
+    <TextView
+        android:id="@+id/tellustxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="130dp"
+        android:fontFamily="@font/opensans_regular"
+        android:text="What's the"
+        android:textColor="@color/white"
+        android:textSize="42dp" />
+
+    <TextView
+        android:id="@+id/whytxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tellustxt"
+        android:layout_marginStart="40dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="PURPOSE"
+        android:textColor="@color/white"
+        android:textSize="62dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/whytxt"
+        android:layout_marginTop="40dp"
+        style="@style/MyCardView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textField"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="60dp"
+                android:backgroundTint="@color/white"
+                android:hint="Tell Us">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="350dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textField"
+                android:layout_marginTop="40dp"
+                android:gravity="center_horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="160dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="20dp"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:text="CANCEL"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/opensans_regular"
+                    android:id="@+id/cancel_3"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="160dp"
+                    android:layout_height="60dp"
+                    style="@style/Widget.Material3.Button"
+                    android:text="SUBMIT"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/opensans_regular"
+                    android:backgroundTint="@color/primary"
+                    android:id="@+id/sbmtbutton"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>
