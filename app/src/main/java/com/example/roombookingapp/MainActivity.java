@@ -32,6 +32,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     CardView c404;
     CardView c405;
 
+    public void onBackClick(){
+        finish();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

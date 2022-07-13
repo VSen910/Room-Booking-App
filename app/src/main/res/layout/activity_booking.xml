@@ -49,4 +49,14 @@
         app:cornerRadius="60dp"
         android:fontFamily="@font/opensans_regular"/>
 
+    <ImageButton
+        android:id="@+id/dropdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:onClick="showPopup"
+        android:backgroundTint="#8016064E"
+        android:src="@drawable/ic_baseline_more_vert" />
+
+
 </RelativeLayout>
