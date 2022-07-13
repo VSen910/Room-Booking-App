@@ -14,7 +14,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="130dp"
         android:fontFamily="@font/opensans_regular"
-        android:text="What's the"
+        android:text="So, what's the"
         android:textColor="@color/white"
         android:textSize="42dp" />
 
