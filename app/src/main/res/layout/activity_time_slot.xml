@@ -7,28 +7,39 @@
     tools:context=".TimeSlotActivity"
     android:background="@drawable/gradient">
 
-    <TextView
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/roomtext"
-        android:text="ROOM"
-        android:textSize="36sp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/montserrat_regular"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:src="@drawable/ic_arrow_back"
+        android:onClick="onBackClick"/>
 
     <TextView
+        android:id="@+id/roomtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/roomnumber"
-        android:includeFontPadding="false"
-        android:layout_marginStart="50dp"
-        android:layout_below="@+id/roomtext"
-        android:text="101"
-        android:textSize="90sp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="ROOM"
         android:textColor="@color/white"
-        android:fontFamily="@font/montserrat_regular" />
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/roomnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/roomtext"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="-10dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:includeFontPadding="false"
+        android:text="101"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="90sp" />
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"

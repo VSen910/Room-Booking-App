@@ -54,8 +54,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
         android:onClick="showPopup"
-        android:backgroundTint="#8016064E"
         android:src="@drawable/ic_baseline_more_vert" />
 
 

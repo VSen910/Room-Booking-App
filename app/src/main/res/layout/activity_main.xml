@@ -798,12 +798,14 @@
     </ScrollView>
 
 
-<ImageButton
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:src="@drawable/ic_arrow_back"
-    android:backgroundTint="#8016064E"
-    android:onClick="onBackClick"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:onClick="onBackClick"
+        android:src="@drawable/ic_arrow_back" />
 
 
 

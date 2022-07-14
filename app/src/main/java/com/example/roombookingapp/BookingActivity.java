@@ -19,24 +19,24 @@ public class BookingActivity extends AppCompatActivity implements View.OnClickLi
    private Button bookrooms ;
 
     @Override
-    public boolean onMenuItemClick(MenuItem menuItem) {
-        Toast.makeText(this, "Signed Out", Toast.LENGTH_SHORT).show();
-        return true;
-    }
-    public void showPopup(View view){
-        PopupMenu popupMenu = new PopupMenu(this, view);
-        popupMenu.setOnMenuItemClickListener(this);
-        popupMenu.inflate(R.menu.menu);
-        popupMenu.show();
-    }
-
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking);
         bookrooms = findViewById(R.id.bookrooms);
         bookrooms.setOnClickListener(this);
+    }
+
+    @Override
+    public boolean onMenuItemClick(MenuItem menuItem) {
+        Toast.makeText(this, "Signed Out", Toast.LENGTH_SHORT).show();
+        return true;
+    }
+
+    public void showPopup(View view){
+        PopupMenu popupMenu = new PopupMenu(this, view);
+        popupMenu.setOnMenuItemClickListener(this);
+        popupMenu.inflate(R.menu.menu);
+        popupMenu.show();
     }
 
     @Override

@@ -93,4 +93,7 @@ public class TimeSlotActivity extends AppCompatActivity implements View.OnClickL
         }
     }
 
+    public void onBackClick(View view) {
+        finish();
+    }
 }
