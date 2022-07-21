@@ -9,119 +9,156 @@
 
 
     <TextView
-        android:id="@+id/email"
+        android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="69dp"
-        android:layout_marginTop="125dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/opensans_regular"
+        android:text="Name"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/usernamebox"
+        android:layout_width="275dp"
+        android:layout_height="49dp"
+        android:layout_below="@+id/username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edittext_design"
+        android:drawableStart="@drawable/ic_person"
+        android:drawablePadding="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:singleLine="true"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/usernamebox"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/opensans_regular"
         android:text="Email"
         android:textColor="@color/white"
-        android:textSize="22sp"
-        android:fontFamily="@font/montserrat_regular"/>
+        android:textSize="17sp" />
 
     <EditText
         android:id="@+id/emailbox"
         android:layout_width="275dp"
-        android:layout_height="54dp"
+        android:layout_height="49dp"
         android:layout_below="@+id/email"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edittext_design"
         android:drawableStart="@drawable/ic_email"
         android:drawablePadding="10dp"
+        android:inputType="textEmailAddress"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
         android:singleLine="true"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/phonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailbox"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/opensans_regular"
+        android:text="Phone Number"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/phonenumberbox"
+        android:layout_width="275dp"
+        android:layout_height="49dp"
+        android:layout_below="@+id/phonenumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
         android:background="@drawable/edittext_design"
+        android:drawableStart="@drawable/ic_phone"
+        android:drawablePadding="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:singleLine="true"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/emailbox"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="69dp"
-        android:layout_marginTop="35dp"
+        android:layout_below="@+id/phonenumberbox"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/opensans_regular"
         android:text="Password"
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        android:fontFamily="@font/montserrat_regular"/>
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
 
     <EditText
         android:id="@+id/passwordbox"
         android:layout_width="275dp"
-        android:layout_height="54dp"
+        android:layout_height="49dp"
         android:layout_below="@+id/password"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edittext_design"
         android:drawableStart="@drawable/ic_lock"
         android:drawablePadding="10dp"
-        android:singleLine="true"
-        android:background="@drawable/edittext_design"
         android:inputType="textPassword"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/cpassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/passwordbox"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="69dp"
-        android:layout_marginTop="35dp"
-        android:text="Confirm Password"
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        android:fontFamily="@font/montserrat_regular"/>
-
-    <EditText
-        android:id="@+id/cpbox"
-        android:layout_width="275dp"
-        android:layout_height="54dp"
-        android:layout_below="@+id/cpassword"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:drawableStart="@drawable/ic_lock"
-        android:drawablePadding="10dp"
-        android:singleLine="true"
-        android:background="@drawable/edittext_design"
-        android:inputType="textPassword"
-        tools:ignore="SpeakableTextPresentCheck" />
+        android:singleLine="true" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/register_2"
+        style="@style/Widget.Material3.Button"
         android:layout_width="180dp"
         android:layout_height="60dp"
-        android:layout_below="@+id/cpbox"
+        android:layout_below="@+id/sudentcheckbox"
         android:layout_centerInParent="true"
-        android:layout_marginTop="60dp"
-        style="@style/Widget.Material3.Button"
+        android:layout_marginTop="35dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/opensans_regular"
         android:text="REGISTER"
         android:textColor="@color/primary"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/cancel_2"
+        style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="180dp"
         android:layout_height="60dp"
         android:layout_below="@+id/register_2"
         android:layout_centerInParent="true"
-        android:layout_marginTop="22dp"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        app:strokeColor="@color/black"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/opensans_regular"
         android:text="CANCEL"
         android:textColor="@color/white"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:strokeColor="@color/black" />
 
-
+    <CheckBox
+        android:id="@+id/sudentcheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordbox"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="21dp"
+        android:buttonTint="@color/white"
+        android:fontFamily="@font/opensans_regular"
+        android:text="Are you a student?"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
 
 
 </RelativeLayout>
