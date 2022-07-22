@@ -70,7 +70,7 @@
         android:layout_marginTop="490dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/opensans_regular"
-        android:text="REGISTER"
+        android:text="SIGN UP"
         android:textColor="@color/primary"
         android:textSize="22sp" />
 
