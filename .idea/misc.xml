@@ -3,8 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/drawable-v24/ic_email_focused.xml" value="0.142" />
+        <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/drawable-v24/ic_lock_focused.xml" value="0.142" />
+        <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/drawable-v24/ic_person_focused.xml" value="0.142" />
+        <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/drawable-v24/ic_phone_focused.xml" value="0.142" />
         <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/drawable/bookingbutton.xml" value="0.142" />
         <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/drawable/cancel_button.xml" value="0.142" />
+        <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/drawable/custom_ic_email.xml" value="0.142" />
+        <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/drawable/custom_ic_lock.xml" value="0.142" />
+        <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/drawable/custom_ic_person.xml" value="0.142" />
+        <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/drawable/custom_ic_phone.xml" value="0.142" />
         <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/drawable/edittext_design.xml" value="0.142" />
         <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/drawable/gradient.xml" value="0.142" />
         <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/drawable/ic_time.xml" value="0.142" />
