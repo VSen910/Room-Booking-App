@@ -33,7 +33,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.register_2:
-                Intent intent1 = new Intent(this, BookingActivity.class);
+                Intent intent1 = new Intent(this, ActivityOTP.class);
                 startActivity(intent1);
                 break;
             case R.id.back_register:

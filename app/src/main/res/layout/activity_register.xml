@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity"
-    android:background="@drawable/gradient">
+    android:background="@drawable/gradient"
+    tools:context=".RegisterActivity">
 
     <ImageButton
         android:id="@+id/back_register"
@@ -23,15 +23,15 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="84dp"
         android:fontFamily="@font/opensans_regular"
         android:text="Let's get Started!"
         android:textColor="@color/white"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.297"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -43,8 +43,8 @@
         android:textColor="#BDBDBD"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.115"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
@@ -53,10 +53,10 @@
         android:layout_height="55dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
-        android:hint="Email"
         android:background="@drawable/edittext_design"
         android:drawableStart="@drawable/custom_ic_email"
         android:drawablePadding="10dp"
+        android:hint="Email"
         android:inputType="textEmailAddress"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
@@ -72,10 +72,10 @@
         android:layout_height="55dp"
         android:layout_centerInParent="true"
         android:layout_marginTop="32dp"
-        android:hint="Password"
         android:background="@drawable/edittext_design"
         android:drawableStart="@drawable/custom_ic_lock"
         android:drawablePadding="10dp"
+        android:hint="Password"
         android:inputType="textPassword"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
@@ -90,11 +90,11 @@
         android:layout_height="55dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
-        android:hint="Phone"
-        android:inputType="phone"
         android:background="@drawable/edittext_design"
         android:drawableStart="@drawable/custom_ic_mobile"
         android:drawablePadding="10dp"
+        android:hint="Phone"
+        android:inputType="phone"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         android:singleLine="true"
@@ -157,10 +157,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Login here"
-        android:textColor="@color/white"
         android:clickable="true"
         android:focusable="true"
+        android:text="Login here"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView"
@@ -180,6 +180,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordbox" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="48dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
