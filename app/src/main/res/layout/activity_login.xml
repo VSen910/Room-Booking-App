@@ -49,7 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/emailbox"
+        android:id="@+id/emailbox_register"
         android:layout_width="275dp"
         android:layout_height="55dp"
         android:layout_centerHorizontal="true"
@@ -68,7 +68,7 @@
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <EditText
-        android:id="@+id/passwordbox"
+        android:id="@+id/passwordbox_register"
         android:layout_width="275dp"
         android:layout_height="55dp"
         android:layout_centerHorizontal="true"
@@ -83,7 +83,7 @@
         android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailbox"
+        app:layout_constraintTop_toBottomOf="@+id/emailbox_register"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <com.google.android.material.button.MaterialButton
@@ -91,7 +91,7 @@
         style="@style/Widget.Material3.Button"
         android:layout_width="180dp"
         android:layout_height="60dp"
-        android:layout_below="@+id/passwordbox"
+        android:layout_below="@+id/passwordbox_register"
         android:layout_centerInParent="true"
         android:layout_marginTop="64dp"
         android:backgroundTint="@color/white"
@@ -102,7 +102,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordbox" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordbox_register" />
 
     <TextView
         android:id="@+id/textView2"

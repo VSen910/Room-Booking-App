@@ -48,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
-        android:id="@+id/emailbox"
+        android:id="@+id/emailbox_register"
         android:layout_width="275dp"
         android:layout_height="55dp"
         android:layout_centerHorizontal="true"
@@ -63,11 +63,11 @@
         android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/usernamebox"
+        app:layout_constraintTop_toBottomOf="@+id/usernamebox_register"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
-        android:id="@+id/passwordbox"
+        android:id="@+id/passwordbox_register"
         android:layout_width="275dp"
         android:layout_height="55dp"
         android:layout_centerInParent="true"
@@ -82,10 +82,10 @@
         android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phonenumberbox" />
+        app:layout_constraintTop_toBottomOf="@+id/phonenumberbox_register" />
 
     <EditText
-        android:id="@+id/phonenumberbox"
+        android:id="@+id/phonenumberbox_register"
         android:layout_width="275dp"
         android:layout_height="55dp"
         android:layout_centerHorizontal="true"
@@ -100,11 +100,11 @@
         android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailbox"
+        app:layout_constraintTop_toBottomOf="@+id/emailbox_register"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
-        android:id="@+id/usernamebox"
+        android:id="@+id/usernamebox_register"
         android:layout_width="275dp"
         android:layout_height="55dp"
         android:layout_centerHorizontal="true"
@@ -126,7 +126,7 @@
         style="@style/Widget.Material3.Button"
         android:layout_width="180dp"
         android:layout_height="60dp"
-        android:layout_below="@+id/sudentcheckbox"
+        android:layout_below="@+id/studentcheckbox"
         android:layout_centerInParent="true"
         android:layout_marginTop="24dp"
         android:backgroundTint="@color/white"
@@ -138,7 +138,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sudentcheckbox" />
+        app:layout_constraintTop_toBottomOf="@+id/studentcheckbox" />
 
     <TextView
         android:id="@+id/textView"
@@ -167,7 +167,7 @@
         app:layout_constraintTop_toBottomOf="@+id/register_2" />
 
     <CheckBox
-        android:id="@+id/sudentcheckbox"
+        android:id="@+id/studentcheckbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -179,7 +179,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordbox" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordbox_register" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
