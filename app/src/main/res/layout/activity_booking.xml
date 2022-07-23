@@ -1,64 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BookingActivity"
-    android:background="@drawable/gradient">
+    android:background="@drawable/gradient"
+    tools:context=".BookingActivity">
+
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="92dp"
+        android:fontFamily="@font/opensans_bold"
+        android:text="What are we up to today"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintDimensionRatio="2.75:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/opensans_regular"
+        android:text="Important meetings? Book a classroom now"
+        android:textColor="#BFBFBF"
+        android:textSize="16sp"
+        app:layout_constraintDimensionRatio="6:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/bookings"
+        style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="300dp"
         android:layout_height="120dp"
         android:layout_centerInParent="true"
-        android:layout_marginTop="20dp"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        app:strokeColor="@color/black"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/opensans_regular"
         android:text="BOOKINGS"
         android:textColor="@color/white"
         android:textSize="24sp"
-        android:fontFamily="@font/opensans_regular"/>
+        app:layout_constraintBottom_toTopOf="@+id/history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/black" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/history"
+        style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="300dp"
         android:layout_height="120dp"
         android:layout_below="@+id/bookings"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        app:strokeColor="@color/black"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/opensans_regular"
         android:text="VIEW HISTORY"
-        android:textSize="24sp"
         android:textColor="@color/white"
-        android:fontFamily="@font/opensans_regular"/>
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/bookrooms"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/black" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/bookrooms"
+        style="@style/Widget.Material3.Button"
         android:layout_width="300dp"
         android:layout_height="120dp"
-        android:layout_centerInParent="true"
         android:layout_below="@+id/history"
-        android:layout_marginTop="20dp"
-        style="@style/Widget.Material3.Button"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="40dp"
         android:backgroundTint="@color/white"
-        android:text="BOOK ROOMS"
+        android:fontFamily="@font/opensans_regular"
+        android:text="BOOK A ROOM"
         android:textColor="@color/primary"
         android:textSize="24sp"
         app:cornerRadius="60dp"
-        android:fontFamily="@font/opensans_regular"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/dropdown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="36dp"
         android:background="@null"
         android:onClick="showPopup"
-        android:src="@drawable/ic_baseline_more_vert" />
+        android:src="@drawable/ic_baseline_more_vert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.908"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="55dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="356dp" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
