@@ -13,4 +13,10 @@ public interface RetrofitInterface {
 
     @POST("/register")
     Call<Void> executeRegister(@Body HashMap<String, String> map);
+
+    @POST("/otp_verify")
+    Call<String> executeOtpVerification();
+
+    @POST("/add_user")
+    Call<Void> executeAddUser();
 }

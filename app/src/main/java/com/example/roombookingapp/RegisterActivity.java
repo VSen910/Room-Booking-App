@@ -84,9 +84,14 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     @Override
                     public void onResponse(Call<Void> call, Response<Void> response) {
                         if(response.code() == 200){
-                            Toast.makeText(getApplicationContext(), "Signed up successfully", Toast.LENGTH_LONG).show();
-                        }else{
+//                            Toast.makeText(getApplicationContext(), "Signed up successfully", Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(getApplicationContext(), ActivityOTP.class));
+                        }else if(response.code() == 400){
                             Toast.makeText(getApplicationContext(), "Already exists", Toast.LENGTH_LONG).show();
+                        }else if(response.code() == 422){
+                            Toast.makeText(getApplicationContext(), "Please fill all the fields", Toast.LENGTH_LONG).show();
+                        }else{
+                            Toast.makeText(getApplicationContext(), "Please enter a valid email address (Only IIIT Dharwad emails are allowed)", Toast.LENGTH_LONG).show();
                         }
                     }
 

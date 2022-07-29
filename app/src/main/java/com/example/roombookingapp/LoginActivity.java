@@ -77,10 +77,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 //                            AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
 //                            builder.setTitle(result.getProfession());
 //                            builder.show();
-                            Toast.makeText(getApplicationContext(), result.getProfession(), Toast.LENGTH_LONG).show();
-
-                        }else{
+                            Toast.makeText(getApplicationContext(), "Signed in successfully", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(getApplicationContext(), BookingActivity.class);
+                            startActivity(intent);
+                        }else if(response.code() == 400){
                             Toast.makeText(getApplicationContext(), "Wrong credentials", Toast.LENGTH_LONG).show();
+                        }else{
+                            Toast.makeText(getApplicationContext(), "Please fill all the fields", Toast.LENGTH_LONG).show();
                         }
                     }
 
