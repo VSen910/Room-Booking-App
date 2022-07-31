@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -52,6 +53,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         backBtn.setOnClickListener(this);
         login.setOnClickListener(this);
         signupTxt.setOnClickListener(this);
+
+
     }
 
     @Override
@@ -77,10 +80,21 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 //                            AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
 //                            builder.setTitle(result.getProfession());
 //                            builder.show();
+
+//                            SharedPreferences sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
+//                            SharedPreferences.Editor editor = sharedPreferences.edit();
+//
+//                            editor.putString("remember", "true");
+//                            editor.apply();
+
+                            emailEdit.setText("");
+                            passwordEdit.setText("");
+
                             Toast.makeText(getApplicationContext(), "Signed in successfully", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(getApplicationContext(), BookingActivity.class);
                             startActivity(intent);
                         }else if(response.code() == 400){
+                            passwordEdit.setText("");
                             Toast.makeText(getApplicationContext(), "Wrong credentials", Toast.LENGTH_LONG).show();
                         }else{
                             Toast.makeText(getApplicationContext(), "Please fill all the fields", Toast.LENGTH_LONG).show();

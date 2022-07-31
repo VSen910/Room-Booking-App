@@ -28,7 +28,7 @@ public class BookingActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public boolean onMenuItemClick(MenuItem menuItem) {
-        Toast.makeText(this, "Signed Out", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Work in progress", Toast.LENGTH_SHORT).show();
         return true;
     }
 
