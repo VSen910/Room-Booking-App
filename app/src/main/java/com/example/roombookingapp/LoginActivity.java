@@ -92,6 +92,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                             Toast.makeText(getApplicationContext(), "Signed in successfully", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(getApplicationContext(), BookingActivity.class);
+                            intent.putExtra("loginParams", result);
                             startActivity(intent);
                         }else if(response.code() == 400){
                             passwordEdit.setText("");

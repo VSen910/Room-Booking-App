@@ -1,6 +1,8 @@
 package com.example.roombookingapp;
 
-public class LoginResult {
+import java.io.Serializable;
+
+public class LoginResult implements Serializable {
 
     private String name;
     private String email;

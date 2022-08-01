@@ -36,6 +36,10 @@ public class TimeSlotActivity extends AppCompatActivity implements View.OnClickL
     private  Button ts7;
     private  Button ts8;
 
+    private String roomNumber;
+    private LoginResult loginParams;
+    private String pickedDate;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,7 +79,8 @@ public class TimeSlotActivity extends AppCompatActivity implements View.OnClickL
                         android.R.style.Theme_DeviceDefault_Dialog, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datePicker, int year, int month, int date) {
-                        dateEditTxt.setText(date + "/" + ((int) (month) + 1) + "/" + year);
+                        pickedDate = date + "/" + ((int) (month) + 1) + "/" + year;
+                        dateEditTxt.setText(pickedDate);
                     }
                 }, mYear, mMonth, mDate);
                 datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis()+1);
@@ -83,8 +88,11 @@ public class TimeSlotActivity extends AppCompatActivity implements View.OnClickL
             }
         });
 
+        roomNumber = getIntent().getStringExtra("ROOM_NUMBER");
+        loginParams = (LoginResult) getIntent().getSerializableExtra("loginParams");
+
         roomnum = findViewById(R.id.roomnumber);
-        roomnum.setText(getIntent().getStringExtra("ROOM_NUMBER"));
+        roomnum.setText(roomNumber);
 
         ts1 = findViewById(R.id.ninetenTS);
         ts1.setOnClickListener(this);
@@ -114,30 +122,41 @@ public class TimeSlotActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View view) {
         Intent intent = new Intent(getApplicationContext(), ReasonActivity.class);
+        intent.putExtra("loginParams", loginParams);
+        intent.putExtra("ROOM_NUMBER", roomNumber);
+        intent.putExtra("date", pickedDate);
+
         switch (view.getId()){
             case R.id.ninetenTS:
+                intent.putExtra("timeSlot", ts1.getText().toString());
                 startActivity(intent);
                 break;
             case R.id.tenelevenTS:
+                intent.putExtra("timeSlot", ts2.getText().toString());
                 startActivity(intent);
                 break;
-
             case R.id.eleventwelveTS:
+                intent.putExtra("timeSlot", ts3.getText().toString());
                 startActivity(intent);
                 break;
             case R.id.twelveoneTS:
+                intent.putExtra("timeSlot", ts4.getText().toString());
                 startActivity(intent);
                 break;
             case R.id.onetwoTS:
+                intent.putExtra("timeSlot", ts5.getText().toString());
                 startActivity(intent);
                 break;
             case R.id.twothreeTS:
+                intent.putExtra("timeSlot", ts6.getText().toString());
                 startActivity(intent);
                 break;
             case R.id.threefourTS:
+                intent.putExtra("timeSlot", ts7.getText().toString());
                 startActivity(intent);
                 break;
             case R.id.fourfiveTS:
+                intent.putExtra("timeSlot", ts8.getText().toString());
                 startActivity(intent);
                 break;
 

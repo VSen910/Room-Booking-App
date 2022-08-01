@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,90 +8,170 @@
     android:background="@drawable/gradient">
 
     <TextView
-        android:id="@+id/tellustxt"
+        android:id="@+id/havealooktxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginTop="180dp"
-        android:fontFamily="@font/opensans_regular"
-        android:text="So, what's the"
+        android:layout_marginBottom="76dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Have a Look"
         android:textColor="@color/white"
-        android:textSize="26sp" />
+        android:textSize="52sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/materialCardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.37"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/whytxt"
+        android:id="@+id/confirmdetailstxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tellustxt"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="-6dp"
-        android:layout_marginEnd="40dp"
-        android:fontFamily="@font/montserrat_medium"
-        android:text="PURPOSE"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:textSize="52sp" />
+        android:layout_below="@+id/havealooktxt"
+        android:fontFamily="@font/opensans_regular"
+        android:text="And confirm your details"
+        android:textColor="#BDBDBD"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/havealooktxt" />
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        style="@style/MyCardView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/whytxt"
-        android:layout_marginTop="40dp"
-        style="@style/MyCardView">
+        android:layout_below="@+id/confirmdetailstxt"
+        android:layout_marginTop="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sbmtbutton"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="28dp"
+                android:backgroundTint="@color/primary"
+                android:fontFamily="@font/opensans_regular"
+                android:text="SUBMIT"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.887"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel_3"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="28dp"
+                android:fontFamily="@font/opensans_regular"
+                android:text="CANCEL"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/sbmtbutton"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textField"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginTop="60dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/timeslottxt"
+                android:layout_marginBottom="35dp"
                 android:backgroundTint="@color/white"
-                android:hint="Tell Us">
+                android:hint="Finally, what purpose?"
+                app:layout_constraintBottom_toTopOf="@+id/sbmtbutton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="350dp"
-                    android:layout_height="200dp"
-                    android:layout_gravity="center_horizontal"/>
-
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/reqtxt"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textField"
-                android:layout_marginTop="40dp"
-                android:gravity="center_horizontal">
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/opensans_regular"
+                android:text="Request by: "
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.097"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="160dp"
-                    android:layout_height="60dp"
-                    android:layout_marginEnd="20dp"
-                    style="@style/Widget.Material3.Button.TextButton"
-                    android:text="CANCEL"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/opensans_regular"
-                    android:id="@+id/cancel_3"/>
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text=""
+                android:textSize="20sp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/reqtxt"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="160dp"
-                    android:layout_height="60dp"
-                    style="@style/Widget.Material3.Button"
-                    android:text="SUBMIT"
-                    android:textSize="20sp"
-                    android:fontFamily="@font/opensans_regular"
-                    android:backgroundTint="@color/primary"
-                    android:id="@+id/sbmtbutton"/>
+            <TextView
+                android:id="@+id/classtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reqtxt"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/opensans_regular"
+                android:text="Classroom: "
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.127"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
-            </LinearLayout>
+            <TextView
+                android:id="@+id/datetxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/classtxt"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/opensans_regular"
+                android:text="Date: "
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.106"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/classtxt" />
 
+            <TextView
+                android:id="@+id/timeslottxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/datetxt"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/opensans_regular"
+                android:text="Timings: "
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.116"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/datetxt" />
 
-        </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
 
-</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

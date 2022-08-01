@@ -19,4 +19,7 @@ public interface RetrofitInterface {
 
     @POST("/add_user")
     Call<Void> executeAddUser();
+
+    @POST("/add_booking")
+    Call<Void> executeBookingAddition(@Body HashMap<String, String> map);
 }

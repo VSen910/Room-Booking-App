@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     CardView c404;
     CardView c405;
 
+    private LoginResult loginParams;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,6 +86,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         c403.setOnClickListener(this);
         c404.setOnClickListener(this);
         c405.setOnClickListener(this);
+
+        loginParams = (LoginResult) getIntent().getSerializableExtra("loginParams");
     }
 
     @Override
@@ -112,6 +116,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.C405:
                 String room = getResources().getResourceEntryName(view.getId());
                 intent.putExtra("ROOM_NUMBER", room);
+                intent.putExtra("loginParams", loginParams);
                 startActivity(intent);
                 break;
         }

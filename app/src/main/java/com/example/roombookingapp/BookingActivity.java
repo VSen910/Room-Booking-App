@@ -16,14 +16,18 @@ import android.widget.Toast;
 import java.util.zip.Inflater;
 
 public class BookingActivity extends AppCompatActivity implements View.OnClickListener, PopupMenu.OnMenuItemClickListener {
-   private Button bookrooms ;
+    private Button bookrooms;
+    private LoginResult loginParams;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking);
+
         bookrooms = findViewById(R.id.bookrooms);
         bookrooms.setOnClickListener(this);
+
+        loginParams = (LoginResult) getIntent().getSerializableExtra("loginParams");
     }
 
     @Override
@@ -42,6 +46,7 @@ public class BookingActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View view) {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("loginParams", loginParams);
         startActivity(intent);
     }
 }
