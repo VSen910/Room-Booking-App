@@ -79,7 +79,7 @@ public class TimeSlotActivity extends AppCompatActivity implements View.OnClickL
                         android.R.style.Theme_DeviceDefault_Dialog, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datePicker, int year, int month, int date) {
-                        pickedDate = date + "/" + ((int) (month) + 1) + "/" + year;
+                        pickedDate = date + "-" + ((int) (month) + 1) + "-" + year;
                         dateEditTxt.setText(pickedDate);
                     }
                 }, mYear, mMonth, mDate);
@@ -126,42 +126,47 @@ public class TimeSlotActivity extends AppCompatActivity implements View.OnClickL
         intent.putExtra("ROOM_NUMBER", roomNumber);
         intent.putExtra("date", pickedDate);
 
-        switch (view.getId()){
-            case R.id.ninetenTS:
-                intent.putExtra("timeSlot", ts1.getText().toString());
-                startActivity(intent);
-                break;
-            case R.id.tenelevenTS:
-                intent.putExtra("timeSlot", ts2.getText().toString());
-                startActivity(intent);
-                break;
-            case R.id.eleventwelveTS:
-                intent.putExtra("timeSlot", ts3.getText().toString());
-                startActivity(intent);
-                break;
-            case R.id.twelveoneTS:
-                intent.putExtra("timeSlot", ts4.getText().toString());
-                startActivity(intent);
-                break;
-            case R.id.onetwoTS:
-                intent.putExtra("timeSlot", ts5.getText().toString());
-                startActivity(intent);
-                break;
-            case R.id.twothreeTS:
-                intent.putExtra("timeSlot", ts6.getText().toString());
-                startActivity(intent);
-                break;
-            case R.id.threefourTS:
-                intent.putExtra("timeSlot", ts7.getText().toString());
-                startActivity(intent);
-                break;
-            case R.id.fourfiveTS:
-                intent.putExtra("timeSlot", ts8.getText().toString());
-                startActivity(intent);
-                break;
+        if(pickedDate != null){
+            switch (view.getId()){
+                case R.id.ninetenTS:
+                    intent.putExtra("timeSlot", ts1.getText().toString());
+                    startActivity(intent);
+                    break;
+                case R.id.tenelevenTS:
+                    intent.putExtra("timeSlot", ts2.getText().toString());
+                    startActivity(intent);
+                    break;
+                case R.id.eleventwelveTS:
+                    intent.putExtra("timeSlot", ts3.getText().toString());
+                    startActivity(intent);
+                    break;
+                case R.id.twelveoneTS:
+                    intent.putExtra("timeSlot", ts4.getText().toString());
+                    startActivity(intent);
+                    break;
+                case R.id.onetwoTS:
+                    intent.putExtra("timeSlot", ts5.getText().toString());
+                    startActivity(intent);
+                    break;
+                case R.id.twothreeTS:
+                    intent.putExtra("timeSlot", ts6.getText().toString());
+                    startActivity(intent);
+                    break;
+                case R.id.threefourTS:
+                    intent.putExtra("timeSlot", ts7.getText().toString());
+                    startActivity(intent);
+                    break;
+                case R.id.fourfiveTS:
+                    intent.putExtra("timeSlot", ts8.getText().toString());
+                    startActivity(intent);
+                    break;
 
 
+            }
+        }else{
+            Toast.makeText(getApplicationContext(), "Select a date", Toast.LENGTH_LONG).show();
         }
+
     }
 
     public void onBackClick(View view) {

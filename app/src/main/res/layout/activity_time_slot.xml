@@ -70,26 +70,37 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_below="@id/pickDateTxt"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="30dp"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp"
                 android:background="@drawable/edittext_design"
-                android:elevation="7dp"
-                android:drawableEnd="@drawable/ic_calendar"
-                android:drawablePadding="20dp"
-
                 android:clickable="false"
                 android:cursorVisible="false"
+                android:drawableEnd="@drawable/ic_calendar"
+                android:drawablePadding="20dp"
+                android:elevation="7dp"
+
                 android:focusable="false"
-                android:focusableInTouchMode="false"/>
+                android:focusableInTouchMode="false"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp" />
+
+            <TextView
+                android:id="@+id/picktimeslottxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/day_date_picker"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:text="Pick a time slot"
+                android:textSize="20sp"
+                android:fontFamily="@font/opensans_regular"/>
 
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/day_date_picker"
-                android:layout_marginTop="70dp"
+                android:layout_below="@id/picktimeslottxt"
+                android:layout_marginTop="15dp"
                 android:scrollbars="none"
                 android:id="@+id/timeslots_grid">
 
