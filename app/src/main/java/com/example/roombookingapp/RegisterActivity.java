@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -27,6 +28,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private String BASE_URL = "http://10.0.2.2:3000";
 
     private ImageButton backBtn;
+    private ImageButton showPassword;
     private Button registerbtn;
     private TextView loginTxt;
     private EditText nameEdit;
@@ -34,6 +36,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private EditText phoneEdit;
     private EditText passwordEdit;
     private CheckBox chkBox;
+
+    private boolean isVisible = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +51,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         retrofitInterface = retrofit.create(RetrofitInterface.class);
 
         backBtn = findViewById(R.id.back_register);
+        showPassword = findViewById(R.id.showPass_register);
         registerbtn = findViewById(R.id.register_2);
         loginTxt = findViewById(R.id.login_here);
         nameEdit = findViewById(R.id.usernamebox_register);
@@ -56,6 +61,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         chkBox = findViewById(R.id.studentcheckbox);
 
         backBtn.setOnClickListener(this);
+        showPassword.setOnClickListener(this);
         registerbtn.setOnClickListener(this);
         loginTxt.setOnClickListener(this);
     }
@@ -104,6 +110,14 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.back_register:
                 finish();
+                break;
+            case R.id.showPass_register:
+                if(!isVisible){
+                    passwordEdit.setTransformationMethod(null);
+                }else{
+                    passwordEdit.setTransformationMethod(new PasswordTransformationMethod());
+                }
+                isVisible = !isVisible;
                 break;
             case R.id.login_here:
                 Intent intent = new Intent(this, LoginActivity.class);
