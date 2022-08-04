@@ -20,6 +20,9 @@
         <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/drawable/tbutton.xml" value="0.142" />
         <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/layout/activity_booking.xml" value="0.25" />
         <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/layout/activity_details.xml" value="0.25" />
+        <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/layout/activity_forgot_password_confim_pass.xml" value="0.25" />
+        <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/layout/activity_forgot_password_email.xml" value="0.25" />
+        <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/layout/activity_forgot_password_otp.xml" value="0.2359375" />
         <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/layout/activity_login_register.xml" value="0.25" />
         <entry key="..\:/AndroidProjects/RoomBookingApp/app/src/main/res/layout/activity_main.xml" value="0.25" />

@@ -25,4 +25,10 @@ public interface RetrofitInterface {
 
     @POST("/room_availability")
     Call<Void> executeRoomAvailability(@Body HashMap<String, String> map);
+
+    @POST("/otp_forgetPass")
+    Call<Void> executeOtpForgetPass(@Body HashMap<String, String> map);
+
+    @POST("/change_pass")
+    Call<Void> executeChangePass(@Body HashMap<String, String> map);
 }

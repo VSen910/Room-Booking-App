@@ -116,10 +116,21 @@
         app:layout_constraintTop_toBottomOf="@+id/passwordbox_register" />
 
     <TextView
+        android:id="@+id/forgotPasswordTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="Forgot Password?"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_2" />
+
+    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="40dp"
         android:text="Don't have an account? "
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -131,7 +142,7 @@
         android:id="@+id/signup_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="40dp"
         android:text="Sign Up"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"

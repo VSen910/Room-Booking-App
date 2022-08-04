@@ -31,6 +31,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private ImageButton backBtn;
     private ImageButton showPassword;
     private Button login;
+    private TextView forgotPass;
     private TextView signupTxt;
     private EditText emailEdit;
     private EditText passwordEdit;
@@ -51,6 +52,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         backBtn = findViewById(R.id.back_login);
         showPassword = findViewById(R.id.showPass_login);
         login  = findViewById(R.id.login_2);
+        forgotPass = findViewById(R.id.forgotPasswordTxt);
         signupTxt = findViewById(R.id.signup_text);
         emailEdit = findViewById(R.id.emailbox_register);
         passwordEdit = findViewById(R.id.passwordbox_register);
@@ -58,6 +60,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         backBtn.setOnClickListener(this);
         showPassword.setOnClickListener(this);
         login.setOnClickListener(this);
+        forgotPass.setOnClickListener(this);
         signupTxt.setOnClickListener(this);
 
 
@@ -125,6 +128,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     passwordEdit.setTransformationMethod(new PasswordTransformationMethod());
                 }
                 isVisible = !isVisible;
+                break;
+            case R.id.forgotPasswordTxt:
+                startActivity(new Intent(getApplicationContext(), ForgotPasswordEmail.class));
                 break;
             case R.id.signup_text:
                 Intent intent = new Intent(this, RegisterActivity.class);
