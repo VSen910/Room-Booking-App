@@ -22,4 +22,7 @@ public interface RetrofitInterface {
 
     @POST("/add_booking")
     Call<Void> executeBookingAddition(@Body HashMap<String, String> map);
+
+    @POST("/room_availability")
+    Call<Void> executeRoomAvailability(@Body HashMap<String, String> map);
 }
