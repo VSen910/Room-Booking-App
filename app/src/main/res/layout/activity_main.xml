@@ -24,7 +24,7 @@
         android:layout_marginTop="70dp"
         android:fontFamily="@font/montserrat_regular"
         android:text="Select a
-        ClassRoom"
+        Classroom"
         android:textColor="@color/white"
         android:textSize="35sp"
         android:textStyle="bold"/>
