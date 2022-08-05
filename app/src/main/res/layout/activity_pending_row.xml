@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pending_card"
+        android:layout_width="350dp"
+        android:layout_height="220dp"
+        android:layout_centerHorizontal="true"
+        android:elevation="15dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="12dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_marginStart="200dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/req_name"
+                android:layout_width="200dp"
+                android:layout_height="95dp"
+                android:paddingStart="8dp"
+                android:paddingTop="2dp"
+                android:text="Palash
+                              Bhasme"
+                android:textColor="@color/primary"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/req_room_no"
+                android:layout_width="160dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="200dp"
+                android:paddingStart="26dp"
+                android:text="C202"
+                android:textColor="@color/primary"
+                android:textSize="38sp" />
+
+            <TextView
+                android:id="@+id/req_position"
+                android:layout_width="200dp"
+                android:layout_height="42dp"
+                android:layout_below="@+id/req_name"
+                android:paddingStart="8dp"
+                android:text="Student"
+                android:textColor="@color/primary"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/req_day"
+                android:layout_width="150dp"
+                android:layout_height="65dp"
+                android:layout_below="@id/req_room_no"
+                android:layout_marginStart="200dp"
+                android:paddingStart="13dp"
+                android:paddingTop="10dp"
+                android:text="9/7/2022"
+                android:textColor="@color/primary"
+                android:textSize="27sp" />
+
+            <TextView
+                android:id="@+id/req_time"
+                android:layout_width="190dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/req_day"
+                android:layout_marginStart="200dp"
+                android:paddingStart="16dp"
+                android:paddingTop="3dp"
+                android:text="10 -11AM"
+                android:textColor="@color/primary"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/req_reason"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/req_position"
+                android:paddingStart="8dp"
+                android:text="Conference"
+                android:textColor="@color/primary"
+                android:textSize="25dp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

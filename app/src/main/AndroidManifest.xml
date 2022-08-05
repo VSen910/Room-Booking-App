@@ -53,6 +53,15 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+
+        <activity android:name=".LoginAdminActivity"
+            android:exported="false"/>
+
+        <activity android:name=".AdminOptActivity"
+            android:exported="false"/>
+
+        <activity android:name=".PendingRequestActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>
