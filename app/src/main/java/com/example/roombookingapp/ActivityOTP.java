@@ -83,6 +83,8 @@ public class ActivityOTP extends AppCompatActivity {
                 if(response.code() == 200){
                     Toast.makeText(getApplicationContext(), "Signed up succesfully", Toast.LENGTH_LONG).show();
                     startActivity(new Intent(getApplicationContext(), BookingActivity.class));
+                    setResult(1, getIntent());
+                    finish();
                 }else{
                     Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
                 }

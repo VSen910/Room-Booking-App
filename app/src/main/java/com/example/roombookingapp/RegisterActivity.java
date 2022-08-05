@@ -1,5 +1,9 @@
 package com.example.roombookingapp;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -91,7 +95,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     public void onResponse(Call<Void> call, Response<Void> response) {
                         if(response.code() == 200){
 //                            Toast.makeText(getApplicationContext(), "Signed up successfully", Toast.LENGTH_LONG).show();
-                            startActivity(new Intent(getApplicationContext(), ActivityOTP.class));
+                            Intent intent = new Intent(getApplicationContext(), ActivityOTP.class);
+                            activityResultLaunch.launch(intent);
                         }else if(response.code() == 400){
                             Toast.makeText(getApplicationContext(), "Already exists", Toast.LENGTH_LONG).show();
                         }else if(response.code() == 422){
@@ -125,4 +130,18 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 startActivity(intent);
         }
     }
+
+    ActivityResultLauncher<Intent> activityResultLaunch = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    if (result.getResultCode() == 1) {
+                        nameEdit.setText("");
+                        emailEdit.setText("");
+                        phoneEdit.setText("");
+                        passwordEdit.setText("");
+                    }
+                }
+            });
 }

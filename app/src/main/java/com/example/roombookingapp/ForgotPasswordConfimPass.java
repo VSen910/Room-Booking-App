@@ -58,7 +58,8 @@ public class ForgotPasswordConfimPass extends AppCompatActivity {
                         public void onResponse(Call<Void> call, Response<Void> response) {
                             if(response.code() == 200){
                                 Toast.makeText(ForgotPasswordConfimPass.this, "Your password has been changed successfully", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+//                                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                                finish();
                             }else{
                                 Toast.makeText(ForgotPasswordConfimPass.this, "Some error", Toast.LENGTH_SHORT).show();
                             }

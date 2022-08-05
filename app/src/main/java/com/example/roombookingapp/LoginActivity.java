@@ -96,13 +96,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 //                            editor.putString("remember", "true");
 //                            editor.apply();
 
-                            emailEdit.setText("");
-                            passwordEdit.setText("");
-
                             Toast.makeText(getApplicationContext(), "Signed in successfully", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(getApplicationContext(), BookingActivity.class);
                             intent.putExtra("loginParams", result);
                             startActivity(intent);
+
+                            emailEdit.setText("");
+                            passwordEdit.setText("");
                         }else if(response.code() == 400){
                             passwordEdit.setText("");
                             Toast.makeText(getApplicationContext(), "Wrong credentials", Toast.LENGTH_LONG).show();

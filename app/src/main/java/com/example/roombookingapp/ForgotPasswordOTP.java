@@ -59,7 +59,9 @@ public class ForgotPasswordOTP extends AppCompatActivity {
                     public void onResponse(Call<String> call, Response<String> response) {
                         String OTP = response.body();
                         if(otp.equals(OTP)){
+                            setResult(1, getIntent());
                             startActivity(new Intent(getApplicationContext(), ForgotPasswordConfimPass.class));
+                            finish();
                         }else{
                             Toast.makeText(getApplicationContext(), "Please try again", Toast.LENGTH_LONG).show();
                         }

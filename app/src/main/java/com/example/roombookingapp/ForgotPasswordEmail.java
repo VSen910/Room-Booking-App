@@ -1,5 +1,9 @@
 package com.example.roombookingapp;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -62,7 +66,8 @@ public class ForgotPasswordEmail extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<Void> call, Response<Void> response) {
                         if(response.code() == 200){
-                            startActivity(new Intent(getApplicationContext(), ForgotPasswordOTP.class));
+                            Intent intent = new Intent(getApplicationContext(), ForgotPasswordOTP.class);
+                            activityResultLaunch.launch(intent);
                         }else if(response.code() == 400){
                             Toast.makeText(ForgotPasswordEmail.this, "Unknown Email", Toast.LENGTH_SHORT).show();
                         }else{
@@ -78,4 +83,15 @@ public class ForgotPasswordEmail extends AppCompatActivity {
             }
         });
     }
+
+    ActivityResultLauncher<Intent> activityResultLaunch = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    if (result.getResultCode() == 1) {
+                        finish();
+                    }
+                }
+            });
 }
