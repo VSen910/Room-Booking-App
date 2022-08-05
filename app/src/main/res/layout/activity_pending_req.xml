@@ -1,33 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:id="@+id/textView13"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/opensans_bold"
         android:text="Pending Requests"
-        android:textSize="55sp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
         android:textColor="@color/white"
-        android:fontFamily="@font/opensans_regular"
-        />
+        android:textSize="45sp"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <RelativeLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pending"
         android:layout_width="match_parent"
-        android:layout_height="700dp"
-        android:layout_marginTop="200dp">
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/pending"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
->
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13">
 
-        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.recyclerview.widget.RecyclerView>
 
-    </RelativeLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="65dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="65dp" />
+
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="700dp"-->
+    <!--        android:layout_marginTop="200dp">-->
+    <!--        -->
+
+    <!--    </RelativeLayout>-->
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
