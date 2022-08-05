@@ -126,8 +126,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.login_here:
                 Intent intent = new Intent(this, LoginActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+                finish();
         }
     }
 
