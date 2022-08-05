@@ -42,12 +42,12 @@
         android:textSize="90sp" />
 
     <com.google.android.material.card.MaterialCardView
+        style="@style/MyCardView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:backgroundTint="#EAE9E9"
         android:layout_below="@+id/roomnumber"
         android:layout_marginTop="40dp"
-        style="@style/MyCardView">
+        android:backgroundTint="#EAE9E9">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -60,9 +60,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
+                android:fontFamily="@font/opensans_regular"
                 android:text="Pick a date"
-                android:textSize="20sp"
-                android:fontFamily="@font/opensans_regular"/>
+                android:textSize="20sp" />
 
 
             <EditText
@@ -70,136 +70,138 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_below="@id/pickDateTxt"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="30dp"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp"
                 android:background="@drawable/edittext_design"
-                android:elevation="7dp"
-                android:drawableEnd="@drawable/ic_calendar"
-                android:drawablePadding="20dp"
-
                 android:clickable="false"
                 android:cursorVisible="false"
+                android:drawableEnd="@drawable/ic_calendar"
+                android:drawablePadding="20dp"
+                android:elevation="7dp"
+
                 android:focusable="false"
-                android:focusableInTouchMode="false"/>
+                android:focusableInTouchMode="false"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp" />
 
             <ScrollView
+                android:id="@+id/timeslots_grid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/day_date_picker"
                 android:layout_marginTop="70dp"
-                android:scrollbars="none"
-                android:id="@+id/timeslots_grid">
+                android:scrollbars="none">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                     <LinearLayout
+                    <LinearLayout
+                        android:id="@+id/timeslots_grid_0"
                         android:layout_width="match_parent"
                         android:layout_height="70dp"
-                        android:gravity="center_horizontal"
-                        android:id="@+id/timeslots_grid_0"
-                        android:clipToPadding="false">
+                        android:clipToPadding="false"
+                        android:gravity="center_horizontal">
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/ninetenTS"
+                            style="@style/Widget.Material3.Button"
                             android:layout_width="135dp"
                             android:layout_height="60dp"
                             android:layout_marginEnd="35dp"
-                            style="@style/Widget.Material3.Button"
                             android:backgroundTint="#D9D9D9"
                             android:elevation="8dp"
+                            android:fontFamily="@font/opensans_regular"
                             android:stateListAnimator="@null"
                             android:text="9-10 AM"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
-                            android:fontFamily="@font/opensans_regular"
-                            android:id="@+id/ninetenTS"/>
+                            android:textSize="18sp" />
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/tenelevenTS"
+                            style="@style/Widget.Material3.Button"
                             android:layout_width="135dp"
                             android:layout_height="60dp"
-                            style="@style/Widget.Material3.Button"
                             android:backgroundTint="#D9D9D9"
                             android:elevation="8dp"
+                            android:fontFamily="@font/opensans_regular"
                             android:stateListAnimator="@null"
                             android:text="10-11 AM"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
-                            android:fontFamily="@font/opensans_regular"
-                            android:id="@+id/tenelevenTS"/>
+                            android:textSize="18sp" />
 
                     </LinearLayout>
+
                     <LinearLayout
+                        android:id="@+id/timeslots_grid_1"
                         android:layout_width="match_parent"
                         android:layout_height="70dp"
                         android:layout_below="@+id/timeslots_grid_0"
-                        android:gravity="center_horizontal"
-                        android:id="@+id/timeslots_grid_1">
+                        android:gravity="center_horizontal">
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/eleventwelveTS"
+                            style="@style/Widget.Material3.Button"
                             android:layout_width="135dp"
                             android:layout_height="60dp"
                             android:layout_marginEnd="35dp"
-                            style="@style/Widget.Material3.Button"
                             android:backgroundTint="#D9D9D9"
                             android:elevation="8dp"
+                            android:fontFamily="@font/opensans_regular"
                             android:stateListAnimator="@null"
                             android:text="11-12 AM"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
-                            android:fontFamily="@font/opensans_regular"
-                            android:id="@+id/eleventwelveTS"/>
+                            android:textSize="18sp" />
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/twelveoneTS"
+                            style="@style/Widget.Material3.Button"
                             android:layout_width="135dp"
                             android:layout_height="60dp"
-                            style="@style/Widget.Material3.Button"
                             android:backgroundTint="#D9D9D9"
                             android:elevation="8dp"
+                            android:fontFamily="@font/opensans_regular"
                             android:stateListAnimator="@null"
                             android:text="12-1 PM"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
-                            android:fontFamily="@font/opensans_regular"
-                            android:id="@+id/twelveoneTS"/>
+                            android:textSize="18sp" />
 
                     </LinearLayout>
+
                     <LinearLayout
+                        android:id="@+id/timeslots_grid_2"
                         android:layout_width="match_parent"
                         android:layout_height="70dp"
                         android:layout_below="@+id/timeslots_grid_1"
-                        android:gravity="center_horizontal"
-                        android:id="@+id/timeslots_grid_2">
+                        android:gravity="center_horizontal">
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/onetwoTS"
+                            style="@style/Widget.Material3.Button"
                             android:layout_width="135dp"
                             android:layout_height="60dp"
                             android:layout_marginEnd="35dp"
-                            style="@style/Widget.Material3.Button"
                             android:backgroundTint="#D9D9D9"
                             android:elevation="8dp"
+                            android:fontFamily="@font/opensans_regular"
                             android:stateListAnimator="@null"
                             android:text="1-2 PM"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
-                            android:fontFamily="@font/opensans_regular"
-                            android:id="@+id/onetwoTS"/>
+                            android:textSize="18sp" />
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/twothreeTS"
+                            style="@style/Widget.Material3.Button"
                             android:layout_width="135dp"
                             android:layout_height="60dp"
-                            style="@style/Widget.Material3.Button"
                             android:backgroundTint="#D9D9D9"
                             android:elevation="8dp"
+                            android:fontFamily="@font/opensans_regular"
                             android:stateListAnimator="@null"
                             android:text="2-3 PM"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
-                            android:fontFamily="@font/opensans_regular"
-                            android:id="@+id/twothreeTS"/>
+                            android:textSize="18sp" />
 
                     </LinearLayout>
 
@@ -240,7 +242,6 @@
                     </LinearLayout>
 
                 </RelativeLayout>
-
 
 
             </ScrollView>

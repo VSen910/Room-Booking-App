@@ -6,11 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class LoginRegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button loginbtn;
     private Button registerbtn;
+    private TextView adminbtn;
+    private TextView clickhere;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,14 +22,20 @@ public class LoginRegisterActivity extends AppCompatActivity implements View.OnC
 
         loginbtn = findViewById(R.id.login_1);
         registerbtn = findViewById(R.id.register_1);
+        clickhere = findViewById(R.id.clickhere);
+
+
         loginbtn.setOnClickListener(this);
         registerbtn.setOnClickListener(this);
+        clickhere.setOnClickListener(this);
+
 
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
+
             case R.id.login_1:
                 Intent intent = new Intent(LoginRegisterActivity.this, LoginActivity.class);
                 startActivity(intent);
@@ -36,6 +45,10 @@ public class LoginRegisterActivity extends AppCompatActivity implements View.OnC
                 startActivity(intent1);
                 break;
 
+            case R.id.clickhere:
+                Intent intent2 = new Intent(getApplicationContext(), LoginAdminActivity.class);
+                startActivity(intent2);
+                break;
         }
     }
 }

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/dialog_reason"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:fontFamily="@font/opensans_regular"
+        android:text="Reason"
+        android:textColor="@color/primary"
+        android:textSize="36sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_below="@+id/dialog_reason"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialog_reason"
+        android:layout_marginTop="0dp"
+        android:gravity="center_horizontal">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dialog_decline"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/opensans_regular"
+            android:text="DECLINE"
+            android:textColor="@color/primary"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/black" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dialog_accept"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/opensans_regular"
+            android:text="ACCEPT"
+            android:textColor="@color/primary"
+            android:textSize="20sp" />
+
+    </LinearLayout></RelativeLayout>
