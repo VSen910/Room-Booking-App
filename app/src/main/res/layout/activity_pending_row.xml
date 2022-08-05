@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <androidx.cardview.widget.CardView
         android:id="@+id/pending_card"
         android:layout_width="350dp"
@@ -31,7 +32,9 @@
                 android:paddingEnd="8dp"
                 android:text="Palash Bhasme"
                 android:textColor="@color/primary"
-                android:textSize="26sp" />
+                android:textSize="26sp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
 
             <TextView
                 android:id="@+id/req_room_no"
@@ -57,7 +60,7 @@
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
                 android:text="Student"
-                android:textColor="@color/primary"
+                android:textColor="@color/grayedTxt"
                 android:textSize="22sp" />
 
             <TextView
@@ -71,7 +74,7 @@
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:text="9/7/2022"
-                android:textColor="@color/primary"
+                android:textColor="@color/grayedTxt"
                 android:textSize="20sp" />
 
             <TextView
@@ -81,13 +84,13 @@
                 android:layout_below="@+id/req_date"
                 android:layout_marginStart="200dp"
                 android:fontFamily="@font/opensans_regular"
+                android:gravity="center"
                 android:paddingStart="20dp"
                 android:paddingTop="3dp"
                 android:paddingEnd="20dp"
                 android:text="10 -11AM"
-                android:textColor="@color/primary"
-                android:textSize="20sp"
-                android:gravity="center"/>
+                android:textColor="@color/grayedTxt"
+                android:textSize="20sp" />
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
