@@ -1,19 +1,19 @@
 package com.example.roombookingapp;
 
 public class RequestModel {
-    String requestName;
-    String requestRoom;
-    String requestTime;
-    String requestDay;
-    String requestReason;
-    String requestPosition;
+    private String requestName;
+    private String requestRoom;
+    private String requestTime;
+    private String requestDate;
+    private String requestReason;
+    private String requestPosition;
 
     public String getRequestName() {
         return requestName;
     }
 
-    public String getRequestDay() {
-        return requestDay;
+    public String getRequestDate() {
+        return requestDate;
     }
 
     public String getRequestRoom() {
@@ -32,11 +32,11 @@ public class RequestModel {
         return requestReason;
     }
 
-    public RequestModel(String requestName, String requestRoom, String requestTime, String requestDay, String requestReason, String requestPosition) {
+    public RequestModel(String requestName, String requestRoom, String requestTime, String requestDate, String requestReason, String requestPosition) {
         this.requestName = requestName;
         this.requestRoom = requestRoom;
         this.requestTime = requestTime;
-        this.requestDay = requestDay;
+        this.requestDate = requestDate;
         this.requestReason = requestReason;
         this.requestPosition = requestPosition;
 

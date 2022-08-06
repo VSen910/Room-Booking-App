@@ -6,11 +6,10 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/pending_card"
         android:layout_width="350dp"
-        android:layout_height="220dp"
+        android:layout_height="180dp"
         android:layout_centerHorizontal="true"
-        android:elevation="15dp"
-        app:cardCornerRadius="15dp"
-        android:layout_marginTop="12dp">
+        app:cardCornerRadius="30dp"
+        android:layout_marginTop="20dp">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -23,68 +22,72 @@
 
             <TextView
                 android:id="@+id/req_name"
-                android:layout_width="200dp"
-                android:layout_height="95dp"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="45dp"
+                android:fontFamily="@font/opensans_bold"
                 android:paddingStart="8dp"
-                android:paddingTop="2dp"
-                android:text="Palash
-                              Bhasme"
+                android:paddingEnd="8dp"
+                android:text="Palash Bhasme"
                 android:textColor="@color/primary"
-                android:textSize="35sp" />
+                android:textSize="26sp" />
 
             <TextView
                 android:id="@+id/req_room_no"
                 android:layout_width="160dp"
-                android:layout_height="75dp"
-                android:layout_marginLeft="200dp"
-                android:paddingStart="26dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/opensans_bold"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
                 android:text="C202"
                 android:textColor="@color/primary"
-                android:textSize="38sp" />
+                android:textSize="38sp"
+                android:gravity="center"/>
 
             <TextView
-                android:id="@+id/req_position"
-                android:layout_width="200dp"
-                android:layout_height="42dp"
+                android:id="@+id/req_profession"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/req_name"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/opensans_regular"
                 android:paddingStart="8dp"
+                android:paddingEnd="8dp"
                 android:text="Student"
                 android:textColor="@color/primary"
                 android:textSize="22sp" />
 
             <TextView
-                android:id="@+id/req_day"
+                android:id="@+id/req_date"
                 android:layout_width="150dp"
-                android:layout_height="65dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/req_room_no"
                 android:layout_marginStart="200dp"
-                android:paddingStart="13dp"
-                android:paddingTop="10dp"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
                 android:text="9/7/2022"
                 android:textColor="@color/primary"
-                android:textSize="27sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/req_time"
                 android:layout_width="190dp"
-                android:layout_height="55dp"
-                android:layout_below="@+id/req_day"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/req_date"
                 android:layout_marginStart="200dp"
-                android:paddingStart="16dp"
+                android:fontFamily="@font/opensans_regular"
+                android:paddingStart="20dp"
                 android:paddingTop="3dp"
+                android:paddingEnd="20dp"
                 android:text="10 -11AM"
                 android:textColor="@color/primary"
-                android:textSize="26sp" />
-
-            <TextView
-                android:id="@+id/req_reason"
-                android:layout_width="200dp"
-                android:layout_height="60dp"
-                android:layout_below="@+id/req_position"
-                android:paddingStart="8dp"
-                android:text="Conference"
-                android:textColor="@color/primary"
-                android:textSize="25dp" />
+                android:textSize="20sp"
+                android:gravity="center"/>
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

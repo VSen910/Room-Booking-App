@@ -72,14 +72,14 @@ public class PendingRequestActivity extends AppCompatActivity implements Request
         dialog1.setPositiveButton("ACCEPT", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Toast.makeText(PendingRequestActivity.this, "Accepted", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Accepted", Toast.LENGTH_LONG).show();
             }
         });
 
         dialog1.setNegativeButton("DECLINE", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Toast.makeText(PendingRequestActivity.this, "Declined", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Declined", Toast.LENGTH_LONG).show();
             }
         });
         dialog1.show();

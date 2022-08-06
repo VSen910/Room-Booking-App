@@ -37,8 +37,8 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.MyViewHo
         holder.tvName.setText(requestModel.get(position).getRequestName());
         holder.tvRoom.setText((requestModel.get(position).getRequestRoom()));
         holder.tvTime.setText(requestModel.get(position).getRequestTime());
-        holder.tvDate.setText(requestModel.get(position).getRequestDay());
-        holder.tvReason.setText(requestModel.get(position).getRequestReason());
+        holder.tvDate.setText(requestModel.get(position).getRequestDate());
+//        holder.tvReason.setText(requestModel.get(position).getRequestReason());
         holder.tvPosition.setText(requestModel.get(position).getRequestPosition());
     }
 
@@ -58,9 +58,9 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.MyViewHo
             tvName = itemView.findViewById(R.id.req_name);
             tvRoom = itemView.findViewById(R.id.req_room_no);
             tvTime = itemView.findViewById((R.id.req_time));
-            tvDate = itemView.findViewById(R.id.req_day);
-            tvReason = itemView.findViewById(R.id.req_reason);
-            tvPosition = itemView.findViewById(R.id.req_position);
+            tvDate = itemView.findViewById(R.id.req_date);
+//            tvReason = itemView.findViewById(R.id.req_reason);
+            tvPosition = itemView.findViewById(R.id.req_profession);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
