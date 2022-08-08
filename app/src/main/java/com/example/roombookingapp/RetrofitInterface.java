@@ -35,4 +35,7 @@ public interface RetrofitInterface {
 
     @POST("/admin_pendingReq")
     Call<ArrayList<BookingDetails>> executeAdminPendingReq();
+
+    @POST("/update_isChecked")
+    Call<Void> executeUpdateIsChecked(@Body HashMap<String, String> map);
 }
