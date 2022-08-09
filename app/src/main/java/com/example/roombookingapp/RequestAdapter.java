@@ -15,11 +15,11 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.MyViewHo
     private final RequestInterface requestInterface;
 
     Context context;
-    ArrayList<RequestModel> requestModel;
+    ArrayList<BookingDetails> bookingDetails;
 
-    public RequestAdapter(Context context, ArrayList<RequestModel> requestModel, RequestInterface requestInterface){
+    public RequestAdapter(Context context, ArrayList<BookingDetails> bookingDetails, RequestInterface requestInterface){
         this.context = context;
-        this.requestModel = requestModel;
+        this.bookingDetails = bookingDetails;
         this.requestInterface = requestInterface;
     }
 
@@ -34,17 +34,17 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull RequestAdapter.MyViewHolder holder, int position) {
-        holder.tvName.setText(requestModel.get(position).getRequestName());
-        holder.tvRoom.setText((requestModel.get(position).getRequestRoom()));
-        holder.tvTime.setText(requestModel.get(position).getRequestTime());
-        holder.tvDate.setText(requestModel.get(position).getRequestDate());
+        holder.tvName.setText(bookingDetails.get(position).getName());
+        holder.tvRoom.setText((bookingDetails.get(position).getRoomNumber()));
+        holder.tvTime.setText(bookingDetails.get(position).getTimeSlot());
+        holder.tvDate.setText(bookingDetails.get(position).getDate());
 //        holder.tvReason.setText(requestModel.get(position).getRequestReason());
-        holder.tvPosition.setText(requestModel.get(position).getRequestPosition());
+        holder.tvPosition.setText(bookingDetails.get(position).getProfession());
     }
 
     @Override
     public int getItemCount() {
-        return  requestModel.size();
+        return bookingDetails.size();
     }
 
 

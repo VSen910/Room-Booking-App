@@ -1,5 +1,6 @@
 package com.example.roombookingapp;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import retrofit2.Call;
@@ -31,4 +32,13 @@ public interface RetrofitInterface {
 
     @POST("/change_pass")
     Call<Void> executeChangePass(@Body HashMap<String, String> map);
+
+    @POST("/admin_pendingReq")
+    Call<ArrayList<BookingDetails>> executeAdminPendingReq();
+
+    @POST("/admin_reqDecline")
+    Call<Void> executeAdminReqDecline(@Body HashMap<String, String> map);
+
+    @POST("/admin_reqAccept")
+    Call<Void> executeAdminReqAccept(@Body HashMap<String, String> map);
 }

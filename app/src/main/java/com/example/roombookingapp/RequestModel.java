@@ -6,7 +6,7 @@ public class RequestModel {
     private String requestTime;
     private String requestDate;
     private String requestReason;
-    private String requestPosition;
+    private String requestProfession;
 
     public String getRequestName() {
         return requestName;
@@ -20,8 +20,8 @@ public class RequestModel {
         return requestRoom;
     }
 
-    public String getRequestPosition() {
-        return requestPosition;
+    public String getRequestProfession() {
+        return requestProfession;
     }
 
     public String getRequestTime() {
@@ -32,13 +32,13 @@ public class RequestModel {
         return requestReason;
     }
 
-    public RequestModel(String requestName, String requestRoom, String requestTime, String requestDate, String requestReason, String requestPosition) {
+    public RequestModel(String requestName, String requestRoom, String requestTime, String requestDate, String requestReason, String requestProfession) {
         this.requestName = requestName;
         this.requestRoom = requestRoom;
         this.requestTime = requestTime;
         this.requestDate = requestDate;
         this.requestReason = requestReason;
-        this.requestPosition = requestPosition;
+        this.requestProfession = requestProfession;
 
     }
 }
