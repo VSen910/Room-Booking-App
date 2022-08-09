@@ -97,6 +97,12 @@ public class PendingRequestActivity extends AppCompatActivity implements Request
             public void onClick(DialogInterface dialogInterface, int i) {
                 reqAccept(bookingDetails.get(position), position);
 
+                if(bookingDetails.isEmpty()){
+                    nothingToShow.setVisibility(View.VISIBLE);
+                }else{
+                    nothingToShow.setVisibility(View.INVISIBLE);
+                }
+
 //                if(toReturn == 1){
 //                    bookingDetails.remove(position);
 //                    adapter.notifyItemRemoved(position);
@@ -118,6 +124,12 @@ public class PendingRequestActivity extends AppCompatActivity implements Request
                 adapter.notifyItemRemoved(position);
                 adapter.notifyItemRangeChanged(position, bookingDetails.size());
                 Toast.makeText(getApplicationContext(), "Request declined", Toast.LENGTH_LONG).show();
+
+                if(bookingDetails.isEmpty()){
+                    nothingToShow.setVisibility(View.VISIBLE);
+                }else{
+                    nothingToShow.setVisibility(View.INVISIBLE);
+                }
             }
         });
         dialog1.show();
@@ -168,13 +180,6 @@ public class PendingRequestActivity extends AppCompatActivity implements Request
                     adapter.notifyItemRemoved(position);
                     adapter.notifyItemRangeChanged(position, bookingDetails.size());
                     Toast.makeText(getApplicationContext(), "Request accepted", Toast.LENGTH_LONG).show();
-
-                    if(bookingDetails.isEmpty()){
-                        nothingToShow.setVisibility(View.VISIBLE);
-                    }else{
-                        nothingToShow.setVisibility(View.INVISIBLE);
-                    }
-
                 }else{
                     Toast.makeText(PendingRequestActivity.this, "This slot has already been booked", Toast.LENGTH_SHORT).show();
                 }
