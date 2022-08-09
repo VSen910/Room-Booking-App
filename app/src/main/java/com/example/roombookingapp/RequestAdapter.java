@@ -28,7 +28,7 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.MyViewHo
     @Override
     public RequestAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.activity_pending_row, parent, false);
+        View view = inflater.inflate(R.layout.pending_row, parent, false);
         return new RequestAdapter.MyViewHolder(view, requestInterface);
     }
 
