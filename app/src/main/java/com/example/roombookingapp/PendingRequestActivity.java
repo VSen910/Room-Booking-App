@@ -1,9 +1,7 @@
 package com.example.roombookingapp;
 
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,6 +31,8 @@ public class PendingRequestActivity extends AppCompatActivity implements Request
     private RecyclerView recyclerView;
     private RequestAdapter adapter;
     private TextView nothingToShow;
+
+    private int toReturn = -1;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,21 +92,28 @@ public class PendingRequestActivity extends AppCompatActivity implements Request
         dialog1.setTitle(name);
         dialog1.setMessage(reason);
         dialog1.setBackground(getResources().getDrawable(R.drawable.dialogue_backgorund, null));
-        dialog1.setPositiveButton("ACCEPT", new DialogInterface.OnClickListener() {
+        dialog1.setPositiveButton("Accept", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                updateListData(bookingDetails.get(position), position);
-                bookingDetails.remove(position);
-                adapter.notifyItemRemoved(position);
-                adapter.notifyItemRangeChanged(position, bookingDetails.size());
-                Toast.makeText(getApplicationContext(), "Request accepted", Toast.LENGTH_LONG).show();
+                reqAccept(bookingDetails.get(position), position);
+
+//                if(toReturn == 1){
+//                    bookingDetails.remove(position);
+//                    adapter.notifyItemRemoved(position);
+//                    adapter.notifyItemRangeChanged(position, bookingDetails.size());
+//                    Toast.makeText(getApplicationContext(), "Request accepted", Toast.LENGTH_LONG).show();
+//                }else if(toReturn == 0){
+//                    Toast.makeText(PendingRequestActivity.this, "Slot already booked", Toast.LENGTH_SHORT).show();
+//                }else{
+//                    Toast.makeText(PendingRequestActivity.this, "Error", Toast.LENGTH_SHORT).show();
+//                }
             }
         });
 
-        dialog1.setNegativeButton("DECLINE", new DialogInterface.OnClickListener() {
+        dialog1.setNegativeButton("Decline", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                updateListData(bookingDetails.get(position), position);
+                reqDecline(bookingDetails.get(position));
                 bookingDetails.remove(position);
                 adapter.notifyItemRemoved(position);
                 adapter.notifyItemRangeChanged(position, bookingDetails.size());
@@ -116,7 +123,7 @@ public class PendingRequestActivity extends AppCompatActivity implements Request
         dialog1.show();
     }
 
-    public void updateListData(BookingDetails obj, int position){
+    public void reqDecline(BookingDetails obj){
         HashMap<String, String> map = new HashMap<>();
         map.put("name", obj.getName());
         map.put("email", obj.getEmail());
@@ -125,7 +132,7 @@ public class PendingRequestActivity extends AppCompatActivity implements Request
         map.put("timeSlot", obj.getTimeSlot());
         map.put("purpose", obj.getPurpose());
 
-        Call<Void> call = retrofitInterface.executeUpdateIsChecked(map);
+        Call<Void> call = retrofitInterface.executeAdminReqDecline(map);
         call.enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
@@ -133,6 +140,43 @@ public class PendingRequestActivity extends AppCompatActivity implements Request
                     return;
                 }else{
                     Toast.makeText(PendingRequestActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                Toast.makeText(PendingRequestActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    public void reqAccept(BookingDetails obj, int position){
+        HashMap<String, String> map = new HashMap<>();
+        map.put("name", obj.getName());
+        map.put("email", obj.getEmail());
+        map.put("roomNumber", obj.getRoomNumber());
+        map.put("date", obj.getDate());
+        map.put("timeSlot", obj.getTimeSlot());
+        map.put("purpose", obj.getPurpose());
+
+        Call<Void> call = retrofitInterface.executeAdminReqAccept(map);
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                if(response.code() == 200){
+                    bookingDetails.remove(position);
+                    adapter.notifyItemRemoved(position);
+                    adapter.notifyItemRangeChanged(position, bookingDetails.size());
+                    Toast.makeText(getApplicationContext(), "Request accepted", Toast.LENGTH_LONG).show();
+
+                    if(bookingDetails.isEmpty()){
+                        nothingToShow.setVisibility(View.VISIBLE);
+                    }else{
+                        nothingToShow.setVisibility(View.INVISIBLE);
+                    }
+
+                }else{
+                    Toast.makeText(PendingRequestActivity.this, "This slot has already been booked", Toast.LENGTH_SHORT).show();
                 }
             }
 
