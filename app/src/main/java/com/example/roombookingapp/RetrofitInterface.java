@@ -44,4 +44,7 @@ public interface RetrofitInterface {
 
     @POST("/user_bookings")
     Call<ArrayList<BookingDetails>> executeUserBooking(@Body HashMap<String, String> map);
+
+    @POST("admin_history")
+    Call<ArrayList<BookingDetails>> executeAdminHistory();
 }

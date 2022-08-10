@@ -2,7 +2,7 @@ package com.example.roombookingapp;
 
 import java.sql.Time;
 
-public class HistoryModel {
+public class AdminHistoryModel {
     private String historyName;
     private String historyRoom;
     private String historyTime;
@@ -42,7 +42,6 @@ public class HistoryModel {
         return historyStatus;
     }
 
-
     public String getHistoryEmail() {
         return historyEmail;
     }
@@ -52,7 +51,7 @@ public class HistoryModel {
     }
 
 
-    public HistoryModel(String historyName, String historyRoom, String historyTime, String historyDate, String historyReason, String historyPosition, String historyStatus, String historyEmail, String historyPhone) {
+    public AdminHistoryModel(String historyName, String historyRoom, String historyTime, String historyDate, String historyReason, String historyPosition, String historyStatus, String historyEmail, String historyPhone) {
         this.historyName = historyName;
         this.historyRoom = historyRoom;
         this.historyTime = historyTime;

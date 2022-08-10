@@ -28,7 +28,7 @@ public class AdminOptActivity extends AppCompatActivity implements View.OnClickL
                 startActivity(intent);
                 break;
             case R.id.historybox1:
-                Intent intent2 = new Intent(AdminOptActivity.this, HistoryActivity.class);
+                Intent intent2 = new Intent(AdminOptActivity.this, AdminHistoryActivity.class);
                 startActivity(intent2);
                 break;
 

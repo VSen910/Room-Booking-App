@@ -63,7 +63,7 @@
         <activity android:name=".PendingRequestActivity"
             android:exported="false"/>
 
-        <activity android:name=".HistoryActivity"
+        <activity android:name=".AdminHistoryActivity"
             android:exported="false"/>
 
     </application>

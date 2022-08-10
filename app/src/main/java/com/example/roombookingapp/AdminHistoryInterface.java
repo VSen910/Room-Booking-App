@@ -1,5 +1,5 @@
 package com.example.roombookingapp;
 
-public interface HistoryInterface {
+public interface AdminHistoryInterface {
     void OnItemClick(int position);
 }
