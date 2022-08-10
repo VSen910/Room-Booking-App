@@ -37,24 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/bookings"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        android:layout_width="300dp"
-        android:layout_height="120dp"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="@font/opensans_regular"
-        android:text="VIEW HISTORY"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/history"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:strokeColor="@color/black" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/history"
+        android:id="@+id/bookings_bookingActivity"
         style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="300dp"
         android:layout_height="120dp"

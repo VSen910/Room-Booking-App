@@ -41,4 +41,7 @@ public interface RetrofitInterface {
 
     @POST("/admin_reqAccept")
     Call<Void> executeAdminReqAccept(@Body HashMap<String, String> map);
+
+    @POST("/user_bookings")
+    Call<ArrayList<BookingDetails>> executeUserBooking(@Body HashMap<String, String> map);
 }
