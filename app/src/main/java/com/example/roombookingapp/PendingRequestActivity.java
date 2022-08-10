@@ -85,12 +85,14 @@ public class PendingRequestActivity extends AppCompatActivity implements Request
 
     @Override
     public void OnItemClick(int position) {
-        String reason = bookingDetails.get(position).getPurpose();
         String name = bookingDetails.get(position).getName();
+        String reason = bookingDetails.get(position).getPurpose();
+        String email = bookingDetails.get(position).getEmail();
+        String phone = bookingDetails.get(position).getPhoneNumber();
 
         MaterialAlertDialogBuilder  dialog1 = new MaterialAlertDialogBuilder(PendingRequestActivity.this);
         dialog1.setTitle(name);
-        dialog1.setMessage(reason);
+        dialog1.setMessage("Email: " + email + "\n" + "Phone: " + phone + "\n" + "Purpose: " + reason);
         dialog1.setBackground(getResources().getDrawable(R.drawable.dialogue_backgorund, null));
         dialog1.setPositiveButton("Accept", new DialogInterface.OnClickListener() {
             @Override
