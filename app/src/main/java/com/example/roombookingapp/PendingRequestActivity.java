@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,6 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.dialog.MaterialDialogs;
 
 import java.util.ArrayList;
 
@@ -76,13 +78,17 @@ public class PendingRequestActivity extends AppCompatActivity implements Request
             }
         });
 
+
         dialog1.setNegativeButton("DECLINE", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Toast.makeText(getApplicationContext(), "Declined", Toast.LENGTH_LONG).show();
             }
         });
+
         dialog1.show();
+
+
 
 
 
