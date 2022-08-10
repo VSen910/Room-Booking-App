@@ -17,6 +17,7 @@ import java.util.zip.Inflater;
 
 public class BookingActivity extends AppCompatActivity implements View.OnClickListener, PopupMenu.OnMenuItemClickListener {
     private Button bookrooms;
+    private Button bookings;
     private LoginResult loginParams;
 
     @Override
@@ -26,6 +27,9 @@ public class BookingActivity extends AppCompatActivity implements View.OnClickLi
 
         bookrooms = findViewById(R.id.bookrooms);
         bookrooms.setOnClickListener(this);
+
+        bookings = findViewById(R.id.bookings_bookingActivity);
+        bookings.setOnClickListener(this);
 
         loginParams = (LoginResult) getIntent().getSerializableExtra("loginParams");
     }
@@ -45,8 +49,15 @@ public class BookingActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.putExtra("loginParams", loginParams);
-        startActivity(intent);
+        switch(view.getId()){
+            case R.id.bookrooms:
+                Intent intent = new Intent(this, MainActivity.class);
+                intent.putExtra("loginParams", loginParams);
+                startActivity(intent);
+            case R.id.bookings_bookingActivity:
+                Intent intent1 = new Intent(this, UserBookingsActivity.class);
+                intent1.putExtra("loginParams", loginParams);
+                startActivity(intent1);
+        }
     }
 }

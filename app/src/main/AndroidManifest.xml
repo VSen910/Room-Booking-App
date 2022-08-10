@@ -12,6 +12,9 @@
         android:theme="@style/Theme.RoomBookingApp"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".UserBookingsActivity"
+            android:exported="false" />
+        <activity
             android:name=".ForgotPasswordConfimPass"
             android:exported="false" />
         <activity
@@ -53,15 +56,15 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-
-        <activity android:name=".LoginAdminActivity"
-            android:exported="false"/>
-
-        <activity android:name=".AdminOptActivity"
-            android:exported="false"/>
-
-        <activity android:name=".PendingRequestActivity"
-            android:exported="false"/>
+        <activity
+            android:name=".LoginAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminOptActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PendingRequestActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
