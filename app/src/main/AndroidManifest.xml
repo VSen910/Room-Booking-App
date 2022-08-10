@@ -66,6 +66,9 @@
         <activity android:name=".AdminHistoryActivity"
             android:exported="false"/>
 
+        <activity android:name=".UserBookingsActivity"
+            android:exported="false"/>
+
     </application>
 
 </manifest>
