@@ -1,6 +1,7 @@
 package com.example.roombookingapp;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,6 +33,7 @@ public class PendingRequestActivity extends AppCompatActivity implements Request
     private RecyclerView recyclerView;
     private RequestAdapter adapter;
     private TextView nothingToShow;
+    private FloatingActionButton fabBtn;
 
     private int toReturn = -1;
 
@@ -45,6 +48,14 @@ public class PendingRequestActivity extends AppCompatActivity implements Request
         retrofitInterface = retrofit.create(RetrofitInterface.class);
 
         nothingToShow = findViewById(R.id.nothingtoshowtxt);
+
+        fabBtn = findViewById(R.id.FABbtn);
+        fabBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), AdminHistoryActivity.class));
+            }
+        });
 
         recyclerView = findViewById(R.id.pending);
         adapter = new RequestAdapter(getApplicationContext(), bookingDetails, this);
