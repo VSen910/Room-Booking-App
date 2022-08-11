@@ -90,8 +90,17 @@ public class UserBookingsActivity extends AppCompatActivity implements RequestIn
 
     @Override
     public void OnItemClick(int position) {
+        String status = getString(R.string.await_confirm);
+        if(bookingDetails.get(position).getIsChecked().equals("true")){
+            if(bookingDetails.get(position).getConfirm().equals("true")){
+                status = getString(R.string.req_accepted);
+            }else{
+                status = getString(R.string.req_declined);
+            }
+        }
+
         MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(UserBookingsActivity.this);
-        dialog.setTitle("Here's why you booked this room");
+        dialog.setTitle(status);
         dialog.setMessage("\"" + bookingDetails.get(position).getPurpose() + "\"");
         dialog.setBackground(getResources().getDrawable(R.drawable.dialogue_backgorund, null));
         dialog.setPositiveButton("Okay", new DialogInterface.OnClickListener() {

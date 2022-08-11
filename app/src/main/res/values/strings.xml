@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Room Booking App</string>
     <string name="click_here"><u>Click Here</u></string>
+    <string name="await_confirm"><b>Awaiting response</b></string>
+    <string name="req_accepted">Your request has been <i>accepted</i></string>
+    <string name="req_declined">Your request has been <i>declined</i></string>
 </resources>
