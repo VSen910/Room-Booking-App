@@ -3,6 +3,7 @@ package com.example.roombookingapp;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +31,7 @@ public class AdminHistoryActivity extends AppCompatActivity implements AdminHist
     private RecyclerView recyclerView;
     private AdminHistoryAdapter adapter;
     private TextView nothingToShow;
+    private ImageButton backBtn;
 
     ArrayList<BookingDetails> bookingDetails = new ArrayList<>();
 
@@ -44,6 +46,14 @@ public class AdminHistoryActivity extends AppCompatActivity implements AdminHist
         retrofitInterface = retrofit.create(RetrofitInterface.class);
 
         nothingToShow = findViewById(R.id.nothingtoshowtxt_adminHistory);
+
+        backBtn = findViewById(R.id.back_adminHistory);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         recyclerView = findViewById(R.id.history_list);
         adapter = new AdminHistoryAdapter(this, bookingDetails, this);

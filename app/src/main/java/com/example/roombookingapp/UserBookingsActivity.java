@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +33,7 @@ public class UserBookingsActivity extends AppCompatActivity implements RequestIn
     private RecyclerView ubRecyclerView;
     private UserBookingsAdapter userBookingsAdapter;
     private TextView nothingToShow;
+    private ImageButton backBtn;
 
     private HashMap<String, String> map = new HashMap<>();
     private LoginResult loginParams;
@@ -50,6 +52,14 @@ public class UserBookingsActivity extends AppCompatActivity implements RequestIn
         loginParams = (LoginResult) getIntent().getSerializableExtra("loginParams");
 
         nothingToShow = findViewById(R.id.nothingtoshowtxt_userbookings);
+
+        backBtn = findViewById(R.id.back_userBooking);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         ubRecyclerView = findViewById(R.id.recyclerview_userBooking);
         userBookingsAdapter = new UserBookingsAdapter(getApplicationContext(), bookingDetails, this);
