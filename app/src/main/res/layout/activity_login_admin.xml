@@ -29,7 +29,7 @@
         android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/emailbox_admin"
+        android:id="@+id/username_admin"
         android:layout_width="275dp"
         android:layout_height="55dp"
         android:layout_below="@id/login_admin_here"
@@ -48,7 +48,7 @@
         android:id="@+id/passwordbox_admin"
         android:layout_width="275dp"
         android:layout_height="55dp"
-        android:layout_below="@id/emailbox_admin"
+        android:layout_below="@id/username_admin"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:background="@drawable/edittext_design"
@@ -76,14 +76,12 @@
 
     <ImageButton
         android:id="@+id/back_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:background="@null"
         android:src="@drawable/ic_arrow_back" />
-
-
 
 
 </RelativeLayout>
