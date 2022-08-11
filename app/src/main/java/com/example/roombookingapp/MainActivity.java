@@ -8,6 +8,12 @@ import android.os.Bundle;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    CardView c001;
+    CardView c002;
+    CardView c003;
+    CardView c004;
+
     CardView c101;
     CardView c102;
     CardView c103;
@@ -39,6 +45,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        c001 = findViewById(R.id.C001);
+        c002 = findViewById(R.id.C002);
+        c003 = findViewById(R.id.C003);
+        c004 = findViewById(R.id.C004);
+
         c101 = findViewById(R.id.C101);
         c102 = findViewById(R.id.C102);
         c103 = findViewById(R.id.C103);
@@ -62,6 +73,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         c403 = findViewById(R.id.C403);
         c404 = findViewById(R.id.C404);
         c405 = findViewById(R.id.C405);
+
+        c001.setOnClickListener(this);
+        c002.setOnClickListener(this);
+        c003.setOnClickListener(this);
+        c004.setOnClickListener(this);
 
         c101.setOnClickListener(this);
         c102.setOnClickListener(this);
@@ -94,6 +110,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         Intent intent = new Intent(this, TimeSlotActivity.class);
         switch (view.getId()){
+            case R.id.C001:
+            case R.id.C002:
+            case R.id.C003:
+            case R.id.C004:
             case R.id.C101:
             case R.id.C102:
             case R.id.C103:
