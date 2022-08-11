@@ -54,10 +54,12 @@ public class BookingActivity extends AppCompatActivity implements View.OnClickLi
                 Intent intent = new Intent(this, MainActivity.class);
                 intent.putExtra("loginParams", loginParams);
                 startActivity(intent);
+                break;
             case R.id.bookings_bookingActivity:
                 Intent intent1 = new Intent(this, UserBookingsActivity.class);
                 intent1.putExtra("loginParams", loginParams);
                 startActivity(intent1);
+                break;
         }
     }
 }

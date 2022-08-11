@@ -92,7 +92,7 @@ public class UserBookingsActivity extends AppCompatActivity implements RequestIn
     public void OnItemClick(int position) {
         MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(UserBookingsActivity.this);
         dialog.setTitle("Here's why you booked this room");
-        dialog.setMessage(bookingDetails.get(position).getPurpose());
+        dialog.setMessage("\"" + bookingDetails.get(position).getPurpose() + "\"");
         dialog.setBackground(getResources().getDrawable(R.drawable.dialogue_backgorund, null));
         dialog.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
             @Override
