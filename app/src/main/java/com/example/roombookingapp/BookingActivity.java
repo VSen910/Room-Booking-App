@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import java.util.zip.Inflater;
 
-public class BookingActivity extends AppCompatActivity implements View.OnClickListener, PopupMenu.OnMenuItemClickListener {
+public class BookingActivity extends AppCompatActivity implements View.OnClickListener {
     private Button bookrooms;
     private Button bookings;
     private LoginResult loginParams;
@@ -34,18 +34,18 @@ public class BookingActivity extends AppCompatActivity implements View.OnClickLi
         loginParams = (LoginResult) getIntent().getSerializableExtra("loginParams");
     }
 
-    @Override
-    public boolean onMenuItemClick(MenuItem menuItem) {
-        Toast.makeText(this, "Work in progress", Toast.LENGTH_SHORT).show();
-        return true;
-    }
-
-    public void showPopup(View view){
-        PopupMenu popupMenu = new PopupMenu(this, view);
-        popupMenu.setOnMenuItemClickListener(this);
-        popupMenu.inflate(R.menu.menu);
-        popupMenu.show();
-    }
+//    @Override
+//    public boolean onMenuItemClick(MenuItem menuItem) {
+//        Toast.makeText(this, "Work in progress", Toast.LENGTH_SHORT).show();
+//        return true;
+//    }
+//
+//    public void showPopup(View view){
+//        PopupMenu popupMenu = new PopupMenu(this, view);
+//        popupMenu.setOnMenuItemClickListener(this);
+//        popupMenu.inflate(R.menu.menu);
+//        popupMenu.show();
+//    }
 
     @Override
     public void onClick(View view) {
