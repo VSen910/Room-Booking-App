@@ -49,30 +49,30 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/login_1"
-        style="@style/Widget.Material3.Button.OutlinedButton"
+        style="@style/Widget.Material3.Button"
         android:layout_width="220dp"
         android:layout_height="60dp"
         android:layout_below="@+id/register_1"
         android:layout_centerInParent="true"
         android:layout_marginTop="12dp"
+        android:backgroundTint="@color/white"
         android:fontFamily="@font/opensans_regular"
         android:text="LOGIN"
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        app:strokeColor="@color/black" />
+        android:textColor="@color/primary"
+        android:textSize="22sp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/register_1"
-        style="@style/Widget.Material3.Button"
+        style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="220dp"
         android:layout_height="60dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="490dp"
-        android:backgroundTint="@color/white"
         android:fontFamily="@font/opensans_regular"
         android:text="SIGN UP"
-        android:textColor="@color/primary"
-        android:textSize="22sp" />
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:strokeColor="@color/black"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
