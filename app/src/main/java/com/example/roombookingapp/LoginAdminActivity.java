@@ -31,7 +31,7 @@ public class LoginAdminActivity extends AppCompatActivity implements View.OnClic
                 finish();
                 break;
             case R.id.admin_log_btn:
-                Intent intent = new Intent(LoginAdminActivity.this, AdminOptActivity.class);
+                Intent intent = new Intent(LoginAdminActivity.this, PendingRequestActivity.class);
                 startActivity(intent);
                 break;
         }
