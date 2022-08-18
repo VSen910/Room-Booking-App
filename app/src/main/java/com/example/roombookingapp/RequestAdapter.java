@@ -38,7 +38,6 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.MyViewHo
         holder.tvRoom.setText((bookingDetails.get(position).getRoomNumber()));
         holder.tvTime.setText(bookingDetails.get(position).getTimeSlot());
         holder.tvDate.setText(bookingDetails.get(position).getDate());
-//        holder.tvReason.setText(requestModel.get(position).getRequestReason());
         holder.tvPosition.setText(bookingDetails.get(position).getProfession());
     }
 
@@ -59,7 +58,6 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.MyViewHo
             tvRoom = itemView.findViewById(R.id.req_room_no);
             tvTime = itemView.findViewById((R.id.req_time));
             tvDate = itemView.findViewById(R.id.req_date);
-//            tvReason = itemView.findViewById(R.id.req_reason);
             tvPosition = itemView.findViewById(R.id.req_profession);
 
             itemView.setOnClickListener(new View.OnClickListener() {

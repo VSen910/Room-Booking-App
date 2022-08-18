@@ -74,8 +74,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.register_2:
-//                Intent intent1 = new Intent(this, ActivityOTP.class);
-//                startActivity(intent1);
                 HashMap<String, String> map = new HashMap<>();
 
                 map.put("name", nameEdit.getText().toString());
@@ -94,7 +92,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     @Override
                     public void onResponse(Call<Void> call, Response<Void> response) {
                         if(response.code() == 200){
-//                            Toast.makeText(getApplicationContext(), "Signed up successfully", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(getApplicationContext(), ActivityOTP.class);
                             activityResultLaunch.launch(intent);
                         }else if(response.code() == 400){
@@ -126,7 +123,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.login_here:
                 Intent intent = new Intent(this, LoginActivity.class);
-//                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 finish();
         }

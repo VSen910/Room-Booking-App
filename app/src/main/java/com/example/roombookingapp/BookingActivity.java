@@ -34,19 +34,6 @@ public class BookingActivity extends AppCompatActivity implements View.OnClickLi
         loginParams = (LoginResult) getIntent().getSerializableExtra("loginParams");
     }
 
-//    @Override
-//    public boolean onMenuItemClick(MenuItem menuItem) {
-//        Toast.makeText(this, "Work in progress", Toast.LENGTH_SHORT).show();
-//        return true;
-//    }
-//
-//    public void showPopup(View view){
-//        PopupMenu popupMenu = new PopupMenu(this, view);
-//        popupMenu.setOnMenuItemClickListener(this);
-//        popupMenu.inflate(R.menu.menu);
-//        popupMenu.show();
-//    }
-
     @Override
     public void onClick(View view) {
         switch(view.getId()){

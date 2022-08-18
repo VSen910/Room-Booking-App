@@ -72,8 +72,6 @@ public class UserBookingsActivity extends AppCompatActivity implements RequestIn
             @Override
             public void onResponse(Call<ArrayList<BookingDetails>> call, Response<ArrayList<BookingDetails>> response) {
                 if(response.code() == 200){
-//                    bookingDetails = response.body();
-
                     for(BookingDetails obj: response.body()){
                         bookingDetails.add(obj);
                     }

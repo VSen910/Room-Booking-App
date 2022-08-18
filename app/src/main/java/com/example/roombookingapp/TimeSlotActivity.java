@@ -72,29 +72,9 @@ public class TimeSlotActivity extends AppCompatActivity implements View.OnClickL
         dateEditTxt = findViewById(R.id.day_date_picker);
         cal = Calendar.getInstance();
 
-//        DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
-//            @Override
-//            public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
-//                cal.set(Calendar.YEAR, year);
-//                cal.set(Calendar.MONTH, month);
-//                cal.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-//
-//                updateCalender();
-//            }
-//
-//            private void updateCalender() {
-//                String format = "dd/MM/yyyy";
-//                SimpleDateFormat sdf = new SimpleDateFormat(format, Locale.US);
-//
-//                datePicker.setText(sdf.format(cal.getTime()));
-//            }
-//        };
-
         dateEditTxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                new DatePickerDialog(TimeSlotActivity.this, date, cal.get(Calendar.YEAR), cal.get(Calendar.MONTH),
-//                        cal.get(Calendar.DAY_OF_MONTH)).show();
                 mDate = cal.get(Calendar.DATE);
                 mMonth = cal.get(Calendar.MONTH);
                 mYear = cal.get(Calendar.YEAR);

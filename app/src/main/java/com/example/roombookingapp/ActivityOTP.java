@@ -53,7 +53,6 @@ public class ActivityOTP extends AppCompatActivity {
 
             @Override
             public void onOTPComplete(String otp) {
-//                Toast.makeText(getApplicationContext(), "The otp is " + otp, Toast.LENGTH_SHORT).show();
                 Call<String> call = retrofitInterface.executeOtpVerification();
                 call.enqueue(new Callback<String>() {
                     @Override

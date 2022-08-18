@@ -70,8 +70,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.login_2:
-//                Intent intent1 = new Intent(this, BookingActivity.class);
-//                startActivity(intent1);
                 HashMap<String, String> map = new HashMap<>();
 
                 map.put("email", emailEdit.getText().toString());
@@ -83,18 +81,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     @Override
                     public void onResponse(Call<LoginResult> call, Response<LoginResult> response) {
                         if(response.code() == 200){
-//                            Toast.makeText(getApplicationContext(), "Logged in", Toast.LENGTH_LONG).show();
                             LoginResult result = response.body();
-
-//                            AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
-//                            builder.setTitle(result.getProfession());
-//                            builder.show();
-
-//                            SharedPreferences sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
-//                            SharedPreferences.Editor editor = sharedPreferences.edit();
-//
-//                            editor.putString("remember", "true");
-//                            editor.apply();
 
                             Toast.makeText(getApplicationContext(), "Signed in successfully", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(getApplicationContext(), BookingActivity.class);
@@ -134,7 +121,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.signup_text:
                 Intent intent = new Intent(this, RegisterActivity.class);
-//                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 finish();
                 break;

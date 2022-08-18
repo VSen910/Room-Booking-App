@@ -65,8 +65,6 @@ public class PendingRequestActivity extends AppCompatActivity implements Request
             @Override
             public void onResponse(Call<ArrayList<BookingDetails>> call, Response<ArrayList<BookingDetails>> response) {
                 if(response.code() == 200){
-//                    bookingDetails = response.body();
-
                     for(BookingDetails obj: response.body()){
                         if(obj.getIsChecked().equals("false")){
                             bookingDetails.add(obj);
@@ -115,17 +113,6 @@ public class PendingRequestActivity extends AppCompatActivity implements Request
                 }else{
                     nothingToShow.setVisibility(View.INVISIBLE);
                 }
-
-//                if(toReturn == 1){
-//                    bookingDetails.remove(position);
-//                    adapter.notifyItemRemoved(position);
-//                    adapter.notifyItemRangeChanged(position, bookingDetails.size());
-//                    Toast.makeText(getApplicationContext(), "Request accepted", Toast.LENGTH_LONG).show();
-//                }else if(toReturn == 0){
-//                    Toast.makeText(PendingRequestActivity.this, "Slot already booked", Toast.LENGTH_SHORT).show();
-//                }else{
-//                    Toast.makeText(PendingRequestActivity.this, "Error", Toast.LENGTH_SHORT).show();
-//                }
             }
         });
 

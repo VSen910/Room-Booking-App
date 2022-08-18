@@ -30,13 +30,6 @@ public class LoginRegisterActivity extends AppCompatActivity implements View.OnC
         registerbtn.setOnClickListener(this);
         clickhere.setOnClickListener(this);
 
-
-//        SharedPreferences sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
-//        String isRememberTrue = sharedPreferences.getString("remember", "false");
-//        if(isRememberTrue.equals("true")){
-//
-//        }
-
     }
 
     @Override

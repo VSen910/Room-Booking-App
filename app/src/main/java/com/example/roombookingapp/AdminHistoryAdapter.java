@@ -39,7 +39,6 @@ public class AdminHistoryAdapter extends RecyclerView.Adapter<AdminHistoryAdapte
         holder.tvTime1.setText(bookingDetails.get(position).getTimeSlot());
         holder.tvDate1.setText(bookingDetails.get(position).getDate());
         holder.tvPosition1.setText(bookingDetails.get(position).getProfession());
-//        holder.tvStatus1.setText(bookingDetails.get(position).getConfirm());
         if(bookingDetails.get(position).getConfirm().equals("true")){
             holder.tvStatus1.setText("ACCEPTED");
         }else{
